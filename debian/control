@@ -1,0 +1,12 @@
+Source: ros-indigo-tiago-description
+Section: misc
+Priority: extra
+Maintainer: PAL Robotics <info@pal-robotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-indigo-tiago-description
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-pmb2-description, ros-indigo-xacro
+Description: This package contains the description (mechanical, kinematic, visual, etc.) of the TIAGO robot. The files in this package are parsed and used by a variety of other components. Most users will not interact directly with this package.
