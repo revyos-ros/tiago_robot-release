@@ -1,0 +1,12 @@
+Source: ros-indigo-tiago-robot
+Section: misc
+Priority: extra
+Maintainer: PAL Robotics <info@pal-robotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-indigo-tiago-robot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-tiago-bringup, ros-indigo-tiago-controller-configuration, ros-indigo-tiago-description
+Description: The tiago_robot package
