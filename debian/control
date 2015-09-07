@@ -1,0 +1,12 @@
+Source: ros-indigo-tiago-bringup
+Section: misc
+Priority: extra
+Maintainer: PAL Robotics <info@pal-robotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-indigo-tiago-bringup
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-head-action, ros-indigo-joy, ros-indigo-joy-teleop, ros-indigo-pmb2-bringup, ros-indigo-robot-state-publisher, ros-indigo-tiago-controller-configuration, ros-indigo-tiago-moveit-config
+Description: The tiago_bringup package
