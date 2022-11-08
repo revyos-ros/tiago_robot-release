@@ -1,13 +1,19 @@
 <?xml version="1.0"?>
-<!--
+<!-- 
+  Copyright (c) 2022 PAL Robotics S.L. All rights reserved.
 
-  Copyright (c) 2014-2015, PAL Robotics, S.L.
-  All rights reserved.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
-  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
-  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
--->
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
@@ -17,82 +23,87 @@
 
   <!--Constant parameters-->
   <xacro:property name="arm_friction"       value="1.0" />
-  <xacro:property name="arm_damping"        value="1.0" />
-  <xacro:property name="arm_1_max_vel"      value="2.7" />
-  <xacro:property name="arm_2_max_vel"      value="3.66" />
-  <xacro:property name="arm_3_max_vel"      value="4.58" />
-  <xacro:property name="arm_4_max_vel"      value="4.58" />
-  <xacro:property name="arm_1_max_effort"   value="39.0" />
-  <xacro:property name="arm_2_max_effort"   value="39.0" />
-  <xacro:property name="arm_3_max_effort"   value="17.86" />
-  <xacro:property name="arm_4_max_effort"   value="17.86" />
-  <xacro:property name="arm_eps"            value="0.02" />
+  <xacro:property name="arm_damping"        value="40.0" />
+  <xacro:property name="arm_1_max_vel"      value="1.95" />
+  <xacro:property name="arm_2_max_vel"      value="1.95" />
+  <xacro:property name="arm_3_max_vel"      value="2.35" />
+  <xacro:property name="arm_4_max_vel"      value="2.35" />
+  <xacro:property name="arm_1_max_effort"   value="43.0" />
+  <xacro:property name="arm_2_max_effort"   value="43.0" />
+  <xacro:property name="arm_3_max_effort"   value="26" />
+  <xacro:property name="arm_4_max_effort"   value="26" />
 
 
-  <xacro:macro name="tiago_arm" params="name parent">
+  <!-- reflect: Set to 1 for a right arm, or to -1 for a left arm-->
+  <!-- tiago_dual: Set to 1 for tiago dual, -1 for original tiago, changes joints 1 and 2 -->
+  <xacro:macro name="tiago_arm" params="name parent wrist_model has_ft_sensor reflect tiago_dual *origin arm_1_offset arm_2_offset arm_3_offset arm_4_offset arm_5_offset arm_6_offset arm_7_offset no_safety_eps:=False">
+   <xacro:property name="arm_eps"       value="${0.00 if no_safety_eps else 0.07}"/>
 
     <!--************************-->
     <!--        SHOULDER        -->
     <!--************************-->
     <link name="${name}_1_link">
       <inertial>
-        <origin xyz="0.019568 -0.052265 0.008219" rpy="0 0 0"/>
-        <mass value="2.108556" />
-        <inertia ixx="0.005489" ixy="-0.001537" ixz="-0.000404" 
-                 iyy="0.002232" iyz="0.000996" 
-                 izz="0.006068" />
+        <!--<origin xyz="0.061191 ${reflect * -0.022397} -0.012835" rpy="0.00000 0.00000 0.00000"/>-->
+        <origin xyz="0.061191 -0.022397 ${reflect * -0.012835}" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.563428"/>
+        <inertia ixx="0.002471" ixy="${reflect * -0.001809}" ixz="-0.001202"
+                 iyy="0.006132" iyz="${reflect * 0.000494}"
+                 izz="0.006704"/>
       </inertial>
       <!-- M90 module -->
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_1.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_1.stl" scale="1 ${-1 * tiago_dual} ${reflect}"/>
         </geometry>
-        <material name="Orange" />
+        <material name="White"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_1.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_1_collision.dae" scale="1 ${-1 * tiago_dual} ${reflect}"/>
         </geometry>
       </collision>
     </link>
-    <gazebo reference="${name}_1_link">
-      <material>Gazebo/Orange</material>
-    </gazebo>
-
 
     <joint name="${name}_1_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_1_link" />
-      <origin xyz="0.155 0.011 -0.152" rpy="0 0 0" />
+      <xacro:insert_block name="origin"/>
       <axis xyz="0 0 1" />
-      <limit lower="${0.0 * deg_to_rad}" upper="${165.0 * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
+      <xacro:property name="arm_1_upper_limit"       value="${90.0 if tiago_dual == 1 else 157.5}"/>
+      <xacro:property name="arm_1_lower_limit"       value="${-67.5 if tiago_dual == 1 else 0.0}"/>
+      <limit lower="${arm_1_lower_limit * deg_to_rad}" upper="${arm_1_upper_limit * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${0 * deg_to_rad}"
-                         soft_upper_limit="${165.0 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${arm_1_lower_limit * deg_to_rad + arm_eps}"
+                         soft_upper_limit="${arm_1_upper_limit * deg_to_rad - arm_eps}" />
     </joint>
 
    <link name="${name}_2_link">
       <inertial>
-        <origin xyz="0.01435 -0.06294 ${0.01039}" rpy="0 0 0"/>
-        <mass value="1.58751" />
-        <inertia ixx="0.002253374"  ixy="-0.00185617271"  ixz="0.00023094382" iyy="0.01079198201" iyz="-0.00004741252" izz="0.0112248261" />
+        <origin xyz="0.030432 0.000229 ${reflect * -0.005942}" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.800397"/>
+        <inertia ixx="0.001809" ixy="${reflect * 0.000015}" ixz="${reflect * 0.000254}"
+                 iyy="0.004333" iyz="${reflect * 0.000014}"
+                 izz="0.004341"/>
       </inertial>
       <visual>
-        <origin xyz="0 0 0" rpy="${180 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+        <!-- <origin xyz="0 0 0" rpy="${180 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" /> -->
+        <origin xyz="0 0 0" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_2.dae" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_2.stl" scale="1 1 ${reflect}"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
-        <origin xyz="0 0 0" rpy="${180 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+        <!-- <origin xyz="0 0 0" rpy="${180 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" /> -->
+        <origin xyz="0 0 0" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_2_collision.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_2_collision.dae" scale="1 1 ${reflect}"/>
         </geometry>
       </collision>
     </link>
@@ -100,64 +111,58 @@
     <joint name="${name}_2_joint" type="revolute">
       <parent link="${name}_1_link" />
       <child link="${name}_2_link" />
-      <origin xyz="0.009 -0.125 -0.032" rpy="${90.0 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+      <origin xyz="0.125 ${tiago_dual * -0.0195} ${reflect * -0.031}"
+              rpy="${reflect * tiago_dual * -90.0 * deg_to_rad} 0.0 0.0"/>
       <axis xyz="0 0 1" />
-      <limit lower="${-93 * deg_to_rad}" upper="${75 * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
+      <xacro:property name="arm_2_upper_limit"       value="${90.0 if tiago_dual == 1 else 62.5}"/>
+      <xacro:property name="arm_2_lower_limit"       value="${-67.5 if tiago_dual == 1 else -90.0}"/>
+      <limit lower="${arm_2_lower_limit * deg_to_rad}" upper="${arm_2_upper_limit * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-93 * deg_to_rad  + arm_eps}"
-                         soft_upper_limit="${ 75 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${arm_2_lower_limit * deg_to_rad  + arm_eps}"
+                         soft_upper_limit="${ arm_2_upper_limit * deg_to_rad - arm_eps}" />
     </joint>
 
     <link name="${name}_3_link">
       <inertial>
-        <origin xyz="0.00557 -0.01042 -0.10388" rpy="0 0 0"/>
-        <mass value="1.79881" />
-         <inertia ixx="0.02682610467"  ixy="-0.00019692212"  ixz="-0.0015045329" iyy="0.02638053578" iyz="0.00263989274" izz="0.002385016" />
+        <origin xyz="0.007418 -0.004361 ${reflect * -0.134194}" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.8"/>
+        <inertia ixx="0.019541" ixy="${1 * -0.000105}" ixz="-0.001717"
+          iyy="0.019936" iyz="${reflect * 0.000852}"
+                 izz="0.002864"/>
       </inertial>
       <visual>
-        <origin xyz="0 0 -0.055" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_3.dae" scale="1 1 1"/>
-        </geometry>
-        <material name="DarkGrey" />
-      </visual>
-      <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <cylinder length="0.07" radius="0.05" />
+          <mesh filename="package://tiago_description/meshes/arm/arm_3.stl" scale="1 1 ${reflect}"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
-        <origin xyz="0 0 -0.055" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_3_collision.stl" scale="1 1 1"/>
-        </geometry>
-      </collision>
-      <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <cylinder length="0.07" radius="0.05" />
+          <mesh filename="package://tiago_description/meshes/arm/arm_3_collision.dae" scale="1 1 ${reflect}"/>
         </geometry>
-        <material name="DarkGrey" />
       </collision>
     </link>
 
     <joint name="${name}_3_joint" type="revolute">
       <parent link="${name}_2_link" />
       <child link="${name}_3_link" />
-      <origin xyz="0.142 -0.02 0" rpy="${0.0 * deg_to_rad} ${-90.0 * deg_to_rad} 0" />
+      <origin xyz="0.0895 0.0 -0.0015"
+              rpy="${-90.0 * deg_to_rad} ${(90.0 - reflect * 90.0) * deg_to_rad} ${reflect * 90.0 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
-      <limit lower="${-200.0 * deg_to_rad}" upper="${90 * deg_to_rad}" effort="${arm_3_max_effort}" velocity="${arm_3_max_vel}" />
+      <xacro:property name="arm_3_lower_limit"       value="${-45. if tiago_dual == 1 else -202.5}"/>
+      <xacro:property name="arm_3_upper_limit"       value="${225 if tiago_dual == 1 else 90.0}"/>
+      <limit lower="${arm_3_lower_limit * deg_to_rad}" upper="${arm_3_upper_limit * deg_to_rad}" effort="${arm_3_max_effort}" velocity="${arm_3_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-200.0 * deg_to_rad + arm_eps}"
-                         soft_upper_limit="${ 90 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${arm_3_lower_limit * deg_to_rad + arm_eps}"
+                         soft_upper_limit="${ arm_3_upper_limit * deg_to_rad - arm_eps}" />
     </joint>
 
     <!--************************-->
@@ -165,50 +170,39 @@
     <!--************************-->
     <link name="${name}_4_link">
       <inertial>
-        <origin xyz="-0.06578 0.0126 0.01194" rpy="0 0 0"/>
-        <mass value="1.35076" />
-        <inertia ixx="0.00220509703"  ixy="-0.00165490069" ixz="-0.0002277335" iyy="0.01177626386" iyz="0.00003472435" izz="0.0120918757" />
+        <origin xyz="${reflect * -0.095658} ${reflect * 0.014666} 0.018133" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.432697"/>
+        <inertia ixx="0.002040" ixy="${reflect * 0.000725}" ixz="${-reflect * 0.001150}"
+                 iyy="0.008424" iyz="-0.000204"
+                 izz="0.008686"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_4.dae" scale="1 1 1"/>
-        </geometry>
-        <material name="DarkGrey" />
-      </visual>
-      <visual>
-        <origin xyz="-0.15 0.02 0" rpy="0 ${90 * deg_to_rad} 0" />
-        <geometry>
-          <cylinder length="0.07" radius="0.05" />
+          <mesh filename="package://tiago_description/meshes/arm/arm_4.stl" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_4_collision.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_4_collision.dae" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
-      </collision>
-      <collision>
-        <origin xyz="-0.15 0.02 0" rpy="0 ${90 * deg_to_rad} 0" />
-        <geometry>
-          <cylinder length="0.07" radius="0.05" />
-        </geometry>
-        <material name="DarkGrey" />
       </collision>
     </link>
 
     <joint name="${name}_4_joint" type="revolute">
       <parent link="${name}_3_link" />
       <child link="${name}_4_link" />
-      <origin xyz="0 -0.02 -0.168" rpy="0 ${-90.0 * deg_to_rad} 0" />
+      <origin xyz="-0.02 -0.027 ${reflect * -0.222}"
+              rpy="${reflect * -90.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${0.0 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
-      <limit lower="${-90 * deg_to_rad}" upper="${135 * deg_to_rad}" effort="${arm_4_max_effort}" velocity="${arm_4_max_vel}" />
+      <limit lower="${-22.5 * deg_to_rad}" upper="${135 * deg_to_rad}" effort="${arm_4_max_effort}" velocity="${arm_4_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${ -90 * deg_to_rad - arm_eps}"
+                         soft_lower_limit="${ -22.5 * deg_to_rad + arm_eps}"
                          soft_upper_limit="${ 135 * deg_to_rad - arm_eps}" />
     </joint>
 
@@ -250,7 +244,8 @@
     <!--************************-->
     <!--        WRIST           -->
     <!--************************-->
-    <xacro:wrist name="arm" parent="${name}_4_link" reflect="1"/>
+
+   <xacro:wrist name="${name}" parent="${name}_4_link" reflect="${reflect}" wrist_model="${wrist_model}" has_ft_sensor="${has_ft_sensor}" arm_5_offset="${arm_5_offset}" arm_6_offset="${arm_6_offset}" arm_7_offset="${arm_7_offset}"  no_safety_eps="${no_safety_eps}"/>
 
     <!--***********************-->
     <!--        TOOL           -->
@@ -275,18 +270,24 @@
       </collision>
     </link>
 
+    <xacro:if value="${wrist_model == 'wrist-2010'}">
+      <xacro:property name="tool_link_z_offset"           value="0.046"/>
+    </xacro:if>
+    <xacro:if value="${wrist_model == 'wrist-2017'}">
+     <xacro:property name="tool_link_z_offset"           value="${ 0.046 if has_ft_sensor else 0.0573 }"/>
+    </xacro:if>
     <joint name="${name}_tool_joint" type="fixed">
       <parent link="${name}_7_link" />
       <child link="${name}_tool_link" />
-      <origin xyz="0 0 0.046" rpy="${90.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${180 * deg_to_rad}" />
+        <origin xyz="0 0 ${reflect * tool_link_z_offset}" rpy="${90.0 * deg_to_rad} ${reflect * -90.0 * deg_to_rad} ${180 * deg_to_rad}" />
     </joint>
 
 
     <!-- extensions -->
-    <xacro:arm_simple_transmission name="${name}" number="1" reduction="1.0" />
-    <xacro:arm_simple_transmission name="${name}" number="2" reduction="1.0" />
-    <xacro:arm_simple_transmission name="${name}" number="3" reduction="1.0" />
-    <xacro:arm_simple_transmission name="${name}" number="4" reduction="1.0" />
+    <xacro:arm_simple_transmission name="${name}" number="1" reduction="1.0" offset_value="${arm_1_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="2" reduction="1.0" offset_value="${arm_2_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="3" reduction="1.0" offset_value="${arm_3_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="4" reduction="1.0" offset_value="${arm_4_offset}"/>
   </xacro:macro>
 
 </robot>

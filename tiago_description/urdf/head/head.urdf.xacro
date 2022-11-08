@@ -1,25 +1,31 @@
 <?xml version="1.0"?>
-<!--
+<!-- 
+  Copyright (c) 2022 PAL Robotics S.L. All rights reserved.
 
-  Copyright (c) 2015, PAL Robotics, S.L.
-  All rights reserved.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
-  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
-  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
--->
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
   <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/head/head.transmission.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/sensors/xtion_pro_live.urdf.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/sensors/orbbec_astra.urdf.xacro" />
 
   <!--Constant parameters-->
   <xacro:property name="head_friction" value="1.0" />
   <xacro:property name="head_damping"  value="0.5" />
   <xacro:property name="head_max_vel"  value="3.0" />
-  <xacro:property name="head_eps"      value="0.02" />
   <xacro:property name="head_1_lower_limit" value="-75"/>
   <xacro:property name="head_1_upper_limit" value="75"/>
   <xacro:property name="head_2_lower_limit" value="-60"/>
@@ -31,23 +37,23 @@
   <xacro:macro name="head_1" params="name parent">
     <link name="${name}_link">
       <inertial>
-        <origin xyz="-0.016151 -0.000132 0.041903" rpy="0 0 0"/>
-        <mass value="0.406285"/>
-        <inertia ixx="0.000506" ixy="-0.000001" ixz="-0.000061"
-                 iyy="0.000552" iyz="0.000002"
-                 izz="0.000381"/>
+        <origin xyz="-0.00508 0.00237 0.07229" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="0.62220"/>
+        <inertia ixx="0.00119200000" ixy="-0.00000700000" ixz="0.00009600000"
+                 iyy="0.00140200000" iyz="0.00000400000"
+                 izz="0.00088900000"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://tiago_description/meshes/head_1.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/head/head_1.stl" scale="1 1 1"/>
         </geometry>
         <material name="White" />
       </visual>
       <collision>
-        <origin xyz="-0.025 0 0" rpy="0 0 0.07" />
+        <origin xyz="0.0 0 0" rpy="0 0 0.0" />
         <geometry>
-          <box size="0.11 0.1 0.14"/>
+          <mesh filename="package://tiago_description/meshes/head/head_1_collision.dae" scale="1 1 1"/>
         </geometry>
         <material name="White" />
       </collision>
@@ -56,7 +62,7 @@
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}"/>
       <child link="${name}_link"/>
-      <origin xyz="0.18735 0 0.0325" rpy="0 0 0" />
+      <origin xyz="0.182 0.0 0.0"  rpy="0 0 0" />
       <axis xyz="0 0 1" />
       <limit lower="${head_1_lower_limit * deg_to_rad}" upper="${head_1_upper_limit * deg_to_rad}" effort="5.197" velocity="${head_max_vel}" />
       <dynamics damping="${head_damping}" friction="${head_friction}"/>
@@ -78,7 +84,7 @@
 
 
     <!-- extensions -->
-    <xacro:head_transmission name="${name}" reduction="1" />
+    <xacro:head_transmission name="${name}" reduction="1" offset_value="${head_1_joint_offset}"/>
 
   </xacro:macro>
 
@@ -88,22 +94,23 @@
   <xacro:macro name="head_2" params="name parent">
     <link name="${name}_link">
       <inertial>
-        <origin xyz="0.013345 0.03824 0.000058" rpy="0 0 0"/>
-        <mass value="0.852579"/>
-        <inertia ixx="0.003677" ixy="-0.000003" ixz="0.000001"
-                 iyy="0.003853" iyz="0"
-                 izz="0.002551"/>
+        <origin xyz="0.04700 0.05542 0.00022" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="0.66123"/>
+        <inertia ixx="0.00462000000" ixy="0.00068900000" ixz="0.00000600000"
+                 iyy="0.00486100000" iyz="0.00000600000"
+                 izz="0.00313200000"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/head_2.dae" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/head/head_2.stl" scale="1 1 1"/>
         </geometry>
+        <material name="White" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/head_2.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/head/head_2_collision.dae" scale="1 1 1"/>
         </geometry>
       </collision>
     </link>
@@ -111,7 +118,7 @@
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}"/>
       <child link="${name}_link"/>
-      <origin xyz="0.0038 0 0.0596" rpy="${90.0 * deg_to_rad} 0 0" />
+      <origin xyz="0.005 0.0 0.098"  rpy="${90.0 * deg_to_rad} 0 0" />
       <axis xyz="0 0 1" />
       <limit lower="${head_2_lower_limit * deg_to_rad}" upper="${head_2_upper_limit * deg_to_rad}" effort="2.77" velocity="${head_max_vel}" />
       <dynamics damping="${head_damping}" friction="${head_friction}"/>
@@ -119,17 +126,35 @@
       <safety_controller k_position="20"
                          k_velocity="20"
                          soft_lower_limit="${head_2_lower_limit * deg_to_rad + head_eps}"
-                         soft_upper_limit="${head_2_upper_limit * deg_to_rad}" />
+                         soft_upper_limit="${head_2_upper_limit * deg_to_rad - head_eps}" />
     </joint>
+
+    <xacro:head_transmission name="${name}" reduction="1" offset_value="${head_2_joint_offset}"/>
+
   </xacro:macro>
 
-  <xacro:macro name="head" params="name parent">
+  <xacro:macro name="head" params="name parent camera_model description_calibration_dir extrinsic_calibration_dir no_safety_eps:=False">
+    <xacro:property name="head_eps"      value="${0.00 if no_safety_eps else 0.07}" />
+
+    <!-- includes -->
+    <xacro:include filename="$(arg description_calibration_dir)/calibration_constants.urdf.xacro" />
+
     <xacro:head_1 name="${name}_1" parent="${parent}" />
     <xacro:head_2 name="${name}_2" parent="${name}_1_link"/>
-    <xacro:xtion_pro_live name="xtion" parent="${name}_2">
-      <origin xyz="0.07 0.0633 0" rpy="${-90 * deg_to_rad} 0 0" />
-      <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
-    </xacro:xtion_pro_live>
+    <xacro:if value="${camera_model == 'asus-xtion'}">
+      <xacro:xtion_pro_live name="head_front_camera" parent="${name}_2" camera_model="${camera_model}" extrinsic_calibration_dir="${extrinsic_calibration_dir}">
+        <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
+        <!-- optical origin -->
+        <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+      </xacro:xtion_pro_live>
+    </xacro:if>
+    <xacro:if value="${camera_model in ['orbbec-astra', 'orbbec-astra-pro']}">
+      <xacro:orbbec_astra name="head_front_camera" parent="${name}_2" camera_model="${camera_model}" extrinsic_calibration_dir="${extrinsic_calibration_dir}">
+        <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
+        <!-- optical origin -->
+        <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+      </xacro:orbbec_astra>
+    </xacro:if>
   </xacro:macro>
 
 </robot>
