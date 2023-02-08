@@ -2,6 +2,9 @@
 Changelog for package tiago_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.2 (2023-02-08)
+------------------
+
 4.0.1 (2022-11-10)
 ------------------
 * Merge branch 'update_license' into 'humble-devel'
