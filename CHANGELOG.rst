@@ -2,6 +2,22 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.5 (2023-03-06)
+------------------
+* Merge branch 'rm_use_sim_time' into 'humble-devel'
+  remove use_sim_time parameter
+  See merge request robots/tiago_robot!191
+* remove use_sim_time parameter
+* Contributors: Jordan Palacios, Noel Jimenez
+
+4.0.4 (2023-03-02)
+------------------
+* Merge branch 'fix_controllers_config' into 'humble-devel'
+  remove initial / from controllers config
+  See merge request robots/tiago_robot!190
+* remove initial / from controllers config
+* Contributors: Jordan Palacios, Noel Jimenez
+
 4.0.3 (2023-02-22)
 ------------------
 
