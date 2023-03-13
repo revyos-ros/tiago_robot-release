@@ -2,6 +2,12 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.5 (2023-03-06)
+------------------
+
+4.0.4 (2023-03-02)
+------------------
+
 4.0.3 (2023-02-22)
 ------------------
 * Merge branch 'join_transmissions' into 'humble-devel'
