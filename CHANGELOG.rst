@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.6 (2023-04-17)
+------------------
+* fixing the file path using no-arm
+* Contributors: jmguerreroh
+
 4.0.5 (2023-03-06)
 ------------------
 
