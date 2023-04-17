@@ -2,6 +2,9 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.6 (2023-04-17)
+------------------
+
 4.0.5 (2023-03-06)
 ------------------
 * Merge branch 'rm_use_sim_time' into 'humble-devel'
