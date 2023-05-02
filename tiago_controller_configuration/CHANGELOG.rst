@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.7 (2023-04-28)
+------------------
+* set sim time for gazebo controller_manager
+* Contributors: Noel Jimenez
+
 4.0.6 (2023-04-17)
 ------------------
 
