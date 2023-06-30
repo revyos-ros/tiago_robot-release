@@ -2,6 +2,25 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.11 (2023-06-28)
+-------------------
+* fix get_tiago_hw_suffix method to match yaml files
+* move pal-hey5 ros2_control xacro to hey5_description
+* Contributors: Noel Jimenez
+
+4.0.10 (2023-06-14)
+-------------------
+* unify file generator and get_tiago_hw_suffix method
+* Contributors: Noel Jimenez
+
+4.0.9 (2023-05-11)
+------------------
+* Add effort and veloctiy command interfaces
+* Contributors: Adria Roig
+
+4.0.8 (2023-05-11)
+------------------
+
 4.0.7 (2023-04-28)
 ------------------
 
