@@ -2,6 +2,38 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.11 (2023-06-28)
+-------------------
+* run gripper_incrementer only when using pal-gripper
+* Contributors: Noel Jimenez
+
+4.0.10 (2023-06-14)
+-------------------
+* load the proper joy_telop config file
+* config files regeneration
+* unify file generator and get_tiago_hw_suffix method
+* Contributors: Noel Jimenez
+
+4.0.9 (2023-05-11)
+------------------
+
+4.0.8 (2023-05-11)
+------------------
+* remove dependency comment
+* disable joystick launch on bringup
+* regenerate joy_teleop cfg
+* remove schunk-wsg end effector condition for joystick cfg
+* enable multibutton joystick commands
+* add joystick commands dependencies
+* start incrementer servers for gripper, head and torso
+* use radians/s for angular velocity
+* update ROS 2 joy_teleof config and regenerate
+* restore yaml generation format
+* add joy dependency
+* update twist_mux config
+* launch joy_node
+* Contributors: Noel Jimenez
+
 4.0.7 (2023-04-28)
 ------------------
 
