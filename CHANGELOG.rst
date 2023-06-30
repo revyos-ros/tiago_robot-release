@@ -2,6 +2,28 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.11 (2023-06-28)
+-------------------
+* fix controllers launcher when there is no end_effector
+* Contributors: Noel Jimenez
+
+4.0.10 (2023-06-14)
+-------------------
+
+4.0.9 (2023-05-11)
+------------------
+* remove ros1 commented dependencies
+* comment controller dependency
+* flake8 fixes
+* add conditional dependency and do not launch gravity compensation controller as default
+* Spawn gravity compensation controller inactive
+* Set gravity compensation controller parameters
+* Add gravity compensation controller
+* Contributors: Adria Roig, Noel Jimenez
+
+4.0.8 (2023-05-11)
+------------------
+
 4.0.7 (2023-04-28)
 ------------------
 * set sim time for gazebo controller_manager
