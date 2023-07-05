@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.12 (2023-07-05)
+-------------------
+* Remove pal flags dependency
+* Contributors: Noel Jimenez
+
 4.0.11 (2023-06-28)
 -------------------
 * fix controllers launcher when there is no end_effector
