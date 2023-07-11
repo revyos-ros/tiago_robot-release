@@ -2,6 +2,12 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.13 (2023-07-11)
+-------------------
+* Remove schunk wsg option
+* Uncomment twist_mux_msgs dependency
+* Contributors: Noel Jimenez
+
 4.0.12 (2023-07-05)
 -------------------
 * Regenerate config for no-arm option
