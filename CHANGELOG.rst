@@ -2,6 +2,73 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.27 (2023-12-18)
+-------------------
+
+4.0.26 (2023-12-14)
+-------------------
+* Update motions file argument name for play_motion2
+* Update approach_planner configurations
+* Use play_motion2 approach_planner config
+* Contributors: Noel Jimenez
+
+4.0.25 (2023-12-12)
+-------------------
+
+4.0.24 (2023-12-12)
+-------------------
+
+4.0.23 (2023-12-11)
+-------------------
+* Fix wrong placed closing bracket
+* Contributors: Noel Jimenez
+
+4.0.22 (2023-11-22)
+-------------------
+* Update cmake_minimum_required version to 3.8
+* Cleanup repository
+* Contributors: Noel Jimenez
+
+4.0.21 (2023-11-15)
+-------------------
+* Comment end-effector joystick control
+* Contributors: Noel Jimenez
+
+4.0.20 (2023-11-14)
+-------------------
+* Add website tag
+* Contributors: Noel Jimenez
+
+4.0.19 (2023-11-13)
+-------------------
+
+4.0.18 (2023-11-07)
+-------------------
+* Split bringup module
+* Use corresponding arguments for modules
+* Fix malformed .em and regenerate motions cfg
+* Remove unused sonar_to_cloud config
+* Contributors: Noel Jimenez
+
+4.0.17 (2023-10-19)
+-------------------
+
+4.0.16 (2023-09-18)
+-------------------
+* Merge branch 'add_modules' into 'humble-devel'
+  Add pal system modules
+  See merge request robots/tiago_robot!227
+* Condition on pal only dependency
+* Adding bringup module
+* Adding joystick module
+* Contributors: Jordan Palacios
+
+4.0.15 (2023-09-04)
+-------------------
+
+4.0.14 (2023-07-20)
+-------------------
+
 4.0.13 (2023-07-11)
 -------------------
 * Remove schunk wsg option
