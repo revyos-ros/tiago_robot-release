@@ -2,6 +2,69 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.27 (2023-12-18)
+-------------------
+
+4.0.26 (2023-12-14)
+-------------------
+
+4.0.25 (2023-12-12)
+-------------------
+* Launch gripper from its controller_configuration package
+* Contributors: Aina Irisarri
+
+4.0.24 (2023-12-12)
+-------------------
+* Bump module names
+* Contributors: Noel Jimenez
+
+4.0.23 (2023-12-11)
+-------------------
+* Remove unused files
+* Contributors: Noel Jimenez
+
+4.0.22 (2023-11-22)
+-------------------
+* Set 'finishes: True' for default_controllers module
+* Update cmake_minimum_required version to 3.8
+* Cleanup repository
+* Contributors: Noel Jimenez
+
+4.0.21 (2023-11-15)
+-------------------
+
+4.0.20 (2023-11-14)
+-------------------
+* Add website tag
+* Rename description and controller modules
+* Contributors: Noel Jimenez
+
+4.0.19 (2023-11-13)
+-------------------
+
+4.0.18 (2023-11-07)
+-------------------
+* Split bringup module
+* Contributors: Noel Jimenez
+
+4.0.17 (2023-10-19)
+-------------------
+* Use wheels calibration if exists
+* Contributors: Noel Jimenez
+
+4.0.16 (2023-09-18)
+-------------------
+
+4.0.15 (2023-09-04)
+-------------------
+
+4.0.14 (2023-07-20)
+-------------------
+* Rename FT Sensor
+* Fix ft_sensor_controller frame_id parameter
+* Add controller for the FT sensor
+* Contributors: Noel Jimenez
+
 4.0.13 (2023-07-11)
 -------------------
 * Remove schunk wsg option

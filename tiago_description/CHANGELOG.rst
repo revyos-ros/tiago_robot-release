@@ -2,6 +2,68 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.27 (2023-12-18)
+-------------------
+* Use pal_urdf_utils materials and deg_to_rad
+* Contributors: Noel Jimenez
+
+4.0.26 (2023-12-14)
+-------------------
+
+4.0.25 (2023-12-12)
+-------------------
+
+4.0.24 (2023-12-12)
+-------------------
+* Bump module names
+* Contributors: Noel Jimenez
+
+4.0.23 (2023-12-11)
+-------------------
+
+4.0.22 (2023-11-22)
+-------------------
+* Update cmake_minimum_required version to 3.8
+* Cleanup repository
+* Contributors: Noel Jimenez
+
+4.0.21 (2023-11-15)
+-------------------
+
+4.0.20 (2023-11-14)
+-------------------
+* Add website tag
+* Rename description and controller modules
+* Contributors: Noel Jimenez
+
+4.0.19 (2023-11-13)
+-------------------
+* Set use_sim_time false as default
+* Contributors: Noel Jimenez
+
+4.0.18 (2023-11-07)
+-------------------
+* Split bringup module
+* Contributors: Noel Jimenez
+
+4.0.17 (2023-10-19)
+-------------------
+
+4.0.16 (2023-09-18)
+-------------------
+
+4.0.15 (2023-09-04)
+-------------------
+* Add use_sim_time argument to use it in the robot description
+* Contributors: Noel Jimenez
+
+4.0.14 (2023-07-20)
+-------------------
+* Rename FT Sensor
+* Use same condition to call ft_sensor macros
+* Add controller for the FT sensor
+* Contributors: Noel Jimenez
+
 4.0.13 (2023-07-11)
 -------------------
 * Remove schunk wsg option
