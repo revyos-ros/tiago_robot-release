@@ -17,7 +17,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro"
        name="tiago" >
 
-  <xacro:macro name="tiago_ros2_control" params="use_sim:=^|true">
+  <xacro:macro name="tiago_ros2_control" params="use_sim:=^|false">
 
     <xacro:arg name="arm" default="true" />
     <xacro:arg name="end_effector" default="pal-hey5"/>
@@ -102,9 +102,7 @@
       <!-- Force Torque sensor -->
       <xacro:if value="${has_ft_sensor}">
         <xacro:include filename="$(find tiago_description)/urdf/sensors/sensors.ros2_control.xacro"/>
-        <xacro:if value="$(arg use_sim)">
-          <xacro:ros2_control_force_torque_sensor name="wrist_ft_joint_force_torque"/>
-        </xacro:if>
+        <xacro:ros2_control_force_torque_sensor name="wrist_ft_sensor"/>
       </xacro:if>
 
     </ros2_control>
