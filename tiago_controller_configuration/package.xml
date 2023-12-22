@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>tiago_controller_configuration</name>
-  <version>4.0.27</version>
+  <version>4.0.28</version>
   <description>Configuration and launch files of TIAGo's controllers</description>
   <maintainer email="jordi.pages@pal-robotics.com">Jordi Pages</maintainer>
   <maintainer email="jordan.palacios@pal-robotics.com">Jordan Palacios</maintainer>
@@ -24,6 +24,7 @@
   <exec_depend>launch_pal</exec_depend>
 <!--  <exec_depend condition="$PAL_DISTRO > 0">ros2_gravity_compensation_controller</exec_depend>-->
   <exec_depend>pal_gripper_controller_configuration</exec_depend>
+  <exec_depend>pal_hey5_controller_configuration</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
