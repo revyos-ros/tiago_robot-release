@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>tiago_description</name>
-  <version>4.0.28</version>
+  <version>4.1.1</version>
   <description>This package contains the description (mechanical, kinematic, visual,
       etc.) of the TIAGO robot.  The files in this package are parsed and used by
       a variety of other components.  Most users will not interact directly
@@ -25,6 +25,7 @@
   <exec_depend>pmb2_description</exec_depend>
   <exec_depend>pal_hey5_description</exec_depend>
   <exec_depend>pal_gripper_description</exec_depend>
+  <exec_depend>pal_robotiq_description</exec_depend>
   <exec_depend>tiago_controller_configuration</exec_depend>
   <exec_depend>launch</exec_depend>
   <exec_depend>launch_ros</exec_depend>
