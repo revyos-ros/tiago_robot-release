@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.1.2 (2024-01-19)
+------------------
+
 4.1.1 (2024-01-19)
 ------------------
 * epick end effector commented
