@@ -2,6 +2,15 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.1.1 (2024-01-19)
+------------------
+* adding the config files needed for robotiq
+* fix prepare_grasp motion
+* Contributors: Aina Irisarri
+
+4.1.0 (2024-01-18)
+------------------
+
 4.0.28 (2023-12-22)
 -------------------
 
