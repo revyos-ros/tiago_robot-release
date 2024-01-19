@@ -2,6 +2,21 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.1.1 (2024-01-19)
+------------------
+* adding the config files needed for robotiq
+* modifying where to find the urdfs for robotiq
+* updating the necessary dependencies for robotiq
+* Contributors: Aina Irisarri
+
+4.1.0 (2024-01-18)
+------------------
+* Merge branch 'ros2-tiago-dual' into 'humble-devel'
+  Ros2 tiago dual
+  See merge request robots/tiago_robot!240
+* Remove unused param
+* Contributors: David ter Kuile, davidterkuile
+
 4.0.28 (2023-12-22)
 -------------------
 * adding pal_hey5 as dependency
