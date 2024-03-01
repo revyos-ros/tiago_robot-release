@@ -2,6 +2,33 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.2.3 (2024-02-28)
+------------------
+* Rename approach_planner config to motion_planner
+* Update approach_planner configuration
+* Contributors: Noel Jimenez
+
+4.2.2 (2024-02-02)
+------------------
+* Merge branch 'feat/register-components' into 'humble-devel'
+  remove need for remapping cmd_vel topic
+  See merge request robots/tiago_robot!262
+* remove need for remapping cmd_vel topic
+* Contributors: antoniobrandi
+
+4.2.1 (2024-01-31)
+------------------
+* fix condition for no-arm
+* Contributors: Aina Irisarri
+
+4.2.0 (2024-01-31)
+------------------
+* Remove right-arm option and use tiago-arm
+* use the same functionality to create the suffix for the config files & match it with tiago_dual
+* change sufix no-end-effector to no-ee
+* update motions from last update in ROS
+* Contributors: Aina Irisarri, Noel Jimenez
+
 4.1.2 (2024-01-19)
 ------------------
 * update robotiq motion files
