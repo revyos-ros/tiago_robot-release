@@ -2,6 +2,25 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.2.3 (2024-02-28)
+------------------
+* Fix no-ee suffix for no-end-effector value
+* Contributors: Noel Jimenez
+
+4.2.2 (2024-02-02)
+------------------
+
+4.2.1 (2024-01-31)
+------------------
+* fix condition for end_effector suffix in the config file names
+* Contributors: Aina Irisarri
+
+4.2.0 (2024-01-31)
+------------------
+* Remove right-arm option and use tiago-arm
+* use the same functionality to create the suffix for the config files & match it with tiago_dual
+* Contributors: Aina Irisarri, Noel Jimenez
+
 4.1.2 (2024-01-19)
 ------------------
 
