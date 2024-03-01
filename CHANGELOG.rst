@@ -2,6 +2,23 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.2.3 (2024-02-28)
+------------------
+
+4.2.2 (2024-02-02)
+------------------
+
+4.2.1 (2024-01-31)
+------------------
+
+4.2.0 (2024-01-31)
+------------------
+* update license year
+* added impedance controller configuration
+* update gravity compensation controller config
+* Remove unused type parameter from controllers configuration
+* Contributors: Noel Jimenez, Sai Kishor Kothakota
+
 4.1.2 (2024-01-19)
 ------------------
 
