@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>tiago_bringup</name>
-  <version>4.2.3</version>
+  <version>4.2.13</version>
   <description>Launch files to upload the robot description and start the controllers</description>
   <maintainer email="jordi.pages@pal-robotics.com">Jordi Pages</maintainer>
   <maintainer email="jordan.palacios@pal-robotics.com">Jordan Palacios</maintainer>
@@ -16,11 +16,10 @@
   <build_depend condition="$PAL_DISTRO >= alum">pal_module_cmake</build_depend>
 
   <exec_depend>geometry_msgs</exec_depend>
-  <exec_depend>joy</exec_depend>
+  <exec_depend>joy_linux</exec_depend>
   <exec_depend>joy_teleop</exec_depend>
   <exec_depend>launch_pal</exec_depend>
   <exec_depend>play_motion2</exec_depend>
-  <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>teleop_tools_msgs</exec_depend>
   <exec_depend>tiago_controller_configuration</exec_depend>
   <exec_depend>tiago_description</exec_depend>
