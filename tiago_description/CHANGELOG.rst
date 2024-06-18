@@ -2,6 +2,108 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.2.13 (2024-06-05)
+-------------------
+* Merge branch 'dtk/fix/description-test-base-type' into 'humble-devel'
+  Add the base type to the tests
+  See merge request robots/tiago_robot!289
+* Add the base type to the tests
+* Merge branch 'dtk/fix/is-public-sim' into 'humble-devel'
+  Fix missing public sim arg
+  See merge request robots/tiago_robot!290
+* Fix missing public sim arg
+* Merge branch 'fix/is_public_sim_argument' into 'humble-devel'
+  add missing argument is_public_sim
+  See merge request robots/tiago_robot!288
+* add missing argument is_public_sim
+* Contributors: Aina Irisarri, David ter Kuile, davidterkuile
+
+4.2.12 (2024-05-10)
+-------------------
+* Merge branch 'omm/fix/desc_test_proper_arg' into 'humble-devel'
+  Changed test arm argument to arm_type
+  See merge request robots/tiago_robot!286
+* Changed test arm argument to arm_type
+* Merge branch 'omm/feat/arm_name_std' into 'humble-devel'
+  Changed arm_model to arm_type in the URDF
+  See merge request robots/tiago_robot!285
+* Changed arm_model to arm_type in the URDF
+* Contributors: davidterkuile, oscarmartinez
+
+4.2.11 (2024-05-09)
+-------------------
+* Merge branch 'omm/feat/public_sim_conditions' into 'humble-devel'
+  Publishing the odom tf depending on the is_public_sim parameter
+  See merge request robots/tiago_robot!284
+* Publishing the odom tf depending on the is_public_sim parameter
+* Contributors: davidterkuile, oscarmartinez
+
+4.2.10 (2024-05-09)
+-------------------
+
+4.2.9 (2024-05-07)
+------------------
+* Merge branch 'dtk/fix/robot-state-publisher' into 'humble-devel'
+  Dtk/fix/robot state publisher
+  See merge request robots/tiago_robot!281
+* Add robot state publisher dependency to tiago description
+* Contributors: davidterkuile
+
+4.2.8 (2024-04-30)
+------------------
+* Merge branch 'omm/fix/urdf_complete_std' into 'humble-devel'
+  URDF std
+  See merge request robots/tiago_robot!278
+* Suggested changed
+* Module, joy config and restored support for tiago dual
+* Gazebo config std
+* Final mods
+* Transmissions std
+* Thermal camera std
+* FT sensor std
+* ee std
+* Arm std
+* Style fix
+* ROS2 control and include std
+* Head std
+* Torso std
+* Property/arg standarization
+* High level urdf standarization
+* Suggested changes
+* Launch files moved to TIAGo family standard
+* Contributors: Oscar, davidterkuile
+
+4.2.7 (2024-04-22)
+------------------
+* Merge branch 'sgg/feat/base_type_omni_base' into 'humble-devel'
+  Sgg/feat/base type omni base
+  See merge request robots/tiago_robot!273
+* Update new robot argument method
+  Update new robot argument
+  Update new robot argument
+  Remove blank lines
+* Launch joint_state_broadcaster depending on the base_type
+  Fix syntax
+  Remove redundant check
+  Remove redundant check
+* Disable depency for humble
+* Add omni-directional gazebo drive
+* Parameterized wheel details based on base type
+* Add omni_base_description package
+* Add base_type parameter
+* Contributors: Sergi Garcia, davidterkuile
+
+4.2.6 (2024-04-16)
+------------------
+
+4.2.5 (2024-04-10)
+------------------
+
+4.2.4 (2024-03-06)
+------------------
+* Fix jnt_reduction_2 for wrist transmission
+* Contributors: Noel Jimenez
+
 4.2.3 (2024-02-28)
 ------------------
 * Fix no-ee suffix for no-end-effector value

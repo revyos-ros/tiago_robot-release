@@ -16,7 +16,7 @@ twist_mux:
         topic   : joy_vel
         timeout : 0.5
         priority: 100
-      keyboard: 
+      keyboard:
         topic   : key_vel
         timeout : 0.5
         priority: 90
@@ -24,22 +24,19 @@ twist_mux:
         topic   : tab_vel
         timeout : 0.5
         priority: 100
-      marker: 
-        name    : marker
+      marker:
         topic   : marker_vel
         timeout : 0.5
         priority: 99
-      phone: 
+      phone:
         topic   : phone_vel
         timeout : 0.5
         priority: 98
-      rviz:
-        name    : rviz_joy
+      rviz_joy:
         topic   : rviz_joy_vel
         timeout : 0.5
         priority: 95
-      servoing:
-        name    : servoing_cmd_vel
+      servoing_cmd_vel:
         topic   : servoing_cmd_vel
         timeout : 0.5
         priority: 20
