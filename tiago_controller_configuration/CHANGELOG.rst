@@ -2,6 +2,84 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.2.13 (2024-06-05)
+-------------------
+* Merge branch 'feat/motions' into 'humble-devel'
+  pre-recorded_motions
+  See merge request robots/tiago_robot!292
+* fix launch ee_controller when no-ft-sensor
+* Contributors: Aina, davidterkuile
+
+4.2.12 (2024-05-10)
+-------------------
+
+4.2.11 (2024-05-09)
+-------------------
+
+4.2.10 (2024-05-09)
+-------------------
+
+4.2.9 (2024-05-07)
+------------------
+
+4.2.8 (2024-04-30)
+------------------
+* Merge branch 'omm/fix/urdf_complete_std' into 'humble-devel'
+  URDF std
+  See merge request robots/tiago_robot!278
+* Suggested changed
+* Module, joy config and restored support for tiago dual
+* Omni related checks and files
+* Suggested changes
+* Launch files moved to TIAGo family standard
+* Merge branch 'tpe/add_omni_controller' into 'humble-devel'
+  Add missing dependency for the omni_base controller
+  See merge request robots/tiago_robot!279
+* Add missing dependency for the omni_base controller
+* Contributors: Oscar, davidterkuile, thomas.peyrucain
+
+4.2.7 (2024-04-22)
+------------------
+* Merge branch 'sgg/feat/base_type_omni_base' into 'humble-devel'
+  Sgg/feat/base type omni base
+  See merge request robots/tiago_robot!273
+* Fix whitespace
+* mobile_base_controller.launch.py
+  Handle is_public_sim
+* Add param to ctor
+* Add use_sim parameter
+* Refactor avoiding if to reduce code complexity
+* Update new robot argument method
+  Update new robot argument
+  Update new robot argument
+  Remove blank lines
+* Launch joint_state_broadcaster depending on the base_type
+  Fix syntax
+  Remove redundant check
+  Remove redundant check
+* Fix syntax
+* Fix quotes in comparison
+* Parameterized mobile base type
+* Hardcoded omni_base controller
+* Contributors: Sergi Garcia, davidterkuile
+
+4.2.6 (2024-04-16)
+------------------
+* Merge branch 'feat/ros2-pipelines' into 'humble-devel'
+  added public sim config for mobile base controller
+  See merge request robots/tiago_robot!274
+* cosmetic
+* added public sim config for mobile base controller
+* Contributors: andreacapodacqua, antoniobrandi
+
+4.2.5 (2024-04-10)
+------------------
+* Add ros2controlcli dependency
+* Contributors: Noel Jimenez
+
+4.2.4 (2024-03-06)
+------------------
+
 4.2.3 (2024-02-28)
 ------------------
 
