@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- 
-  Copyright (c) 2022 PAL Robotics S.L. All rights reserved.
+  Copyright (c) 2024 PAL Robotics S.L. All rights reserved.
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -14,9 +14,15 @@
   See the License for the specific language governing permissions and
   limitations under the License.
  -->
+
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
+  <!-- INCLUDES -->
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/pi.urdf.xacro" />
+
+  <!-- MACRO DEFINITION-->
   <xacro:macro name="openni_camera_gazebo_v0" params="name">
+
     <gazebo reference="${name}_rgb_frame">
       <sensor type="depth" name="${name}_frame_sensor">
         <always_on>true</always_on>
@@ -32,7 +38,7 @@
             <near>0.3</near>
             <far>8.0</far>
           </clip>
-	  <distortion>
+          <distortion>
             <k1>0.00000001</k1>
             <k2>0.00000001</k2>
             <k3>0.00000001</k3>
@@ -43,12 +49,12 @@
         <plugin name="${name}_frame_controller" filename="libgazebo_ros_camera.so">
           <camera_name>${name}</camera_name>
           <ros>
-			  <!-- <namespace>${name}</namespace>-->
-	    <remapping>${name}/image_raw:=${name}/rgb/image_raw</remapping>
-	    <remapping>${name}/camera_info:=${name}/rgb/camera_info</remapping>
-	    <remapping>${name}/depth/image_raw:=${name}/depth_registered/image_raw</remapping>
-	    <remapping>${name}/depth/camera_info:=${name}/depth_registered/camera_info</remapping>
-	    <remapping>${name}/points:=${name}/depth_registered/points</remapping>
+            <!-- <namespace>${name}</namespace>-->
+            <remapping>${name}/image_raw:=${name}/rgb/image_raw</remapping>
+            <remapping>${name}/camera_info:=${name}/rgb/camera_info</remapping>
+            <remapping>${name}/depth/image_raw:=${name}/depth_registered/image_raw</remapping>
+            <remapping>${name}/depth/camera_info:=${name}/depth_registered/camera_info</remapping>
+            <remapping>${name}/points:=${name}/depth_registered/points</remapping>
           </ros>
           <frame_name>${name}_rgb_optical_frame</frame_name>
           <min_depth>0.3</min_depth>
@@ -56,5 +62,7 @@
         </plugin>
       </sensor>
     </gazebo>
+
   </xacro:macro>
+
 </robot>

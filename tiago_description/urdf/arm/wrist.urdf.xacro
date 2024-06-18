@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- 
-  Copyright (c) 2022 PAL Robotics S.L. All rights reserved.
+  Copyright (c) 2024 PAL Robotics S.L. All rights reserved.
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -14,41 +14,45 @@
   See the License for the specific language governing permissions and
   limitations under the License.
  -->
+
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <!--File includes-->
+  <!-- PROPERTIES -->
+  <xacro:property name="wrist_friction" value="1.0" />
+  <xacro:property name="wrist_damping" value="1.0" />
+  <xacro:property name="wrist_1_max_vel" value="1.95" />
+  <xacro:property name="wrist_2_max_vel" value="1.76" />
+  <xacro:property name="wrist_3_max_vel" value="1.76" />
+  <xacro:property name="wrist_1_max_effort" value="3" />
+  <xacro:property name="wrist_2_max_effort" value="6.6" />
+  <xacro:property name="wrist_3_max_effort" value="6.6" />
+  <xacro:property name="wrist_eps" value="${0.00 if no_safety_eps else 0.02}"/>
+
+  <!-- INCLUDES -->
   <xacro:include filename="$(find pal_urdf_utils)/urdf/deg_to_rad.urdf.xacro" />
 
-  <!--Constant parameters-->
-  <xacro:property name="wrist_friction"       value="1.0" />
-  <xacro:property name="wrist_damping"        value="1.0" />
-  <xacro:property name="wrist_1_max_vel"      value="1.95" />
-  <xacro:property name="wrist_2_max_vel"      value="1.76" />
-  <xacro:property name="wrist_3_max_vel"      value="1.76" />
-  <xacro:property name="wrist_1_max_effort"   value="3" />
-  <xacro:property name="wrist_2_max_effort"   value="6.6" />
-  <xacro:property name="wrist_3_max_effort"   value="6.6" />
+  <!-- MACRO DEFINITION -->
+  <xacro:macro name="wrist" params="name parent wrist_model reflect">
 
-  <xacro:macro name="wrist" params="name parent reflect wrist_model has_ft_sensor arm_5_offset arm_6_offset arm_7_offset no_safety_eps:=False">
-   <xacro:property name="wrist_eps"       value="${0.00 if no_safety_eps else 0.02}"/>
+    <!-- Param dependant properties -->
+    <xacro:if value="${wrist_model == 'wrist-2010'}">
+      <xacro:property name="wrist_6_range" value="${ 81 if has_ft_sensor else 90 }"/>
+    </xacro:if>
+    <xacro:if value="${wrist_model == 'wrist-2017'}">
+      <xacro:property name="wrist_6_range" value="81"/>
+    </xacro:if>
 
-    <!--************************-->
-    <!--        WRIST           -->
-    <!--************************-->
+    <!-- Wrist-->
     <link name="${name}_5_link">
       <inertial>
         <origin xyz="0.001078 -0.000151 ${reflect * -0.077173}" rpy="0.00000 0.00000 0.00000"/>
         <xacro:if value="${wrist_model == 'wrist-2010'}">
           <mass value="1.655819"/>
-          <inertia ixx="0.00613800000" ixy="-0.00000400000" ixz="0.00015600000"
-                   iyy="0.00564000000" iyz="0.00002200000"
-                   izz="0.00179700000"/>
+          <inertia ixx="0.00613800000" ixy="-0.00000400000" ixz="0.00015600000" iyy="0.00564000000" iyz="0.00002200000" izz="0.00179700000"/>
         </xacro:if>
         <xacro:if value="${wrist_model == 'wrist-2017'}">
           <mass value="0.9359143689" />
-          <inertia ixx="0.001036187977" ixy="1.0622321E-07" ixz="1.9920336E-06"
-                   iyy="0.000794527176366096" iyz="-2.56396106998404E-07"
-                   izz="0.000439831229979178" />
+          <inertia ixx="0.001036187977" ixy="1.0622321E-07" ixz="1.9920336E-06" iyy="0.000794527176366096" iyz="-2.56396106998404E-07" izz="0.000439831229979178" />
         </xacro:if>
       </inertial>
       <visual>
@@ -74,10 +78,7 @@
       <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_1_max_effort}" velocity="${wrist_1_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
 
-      <safety_controller k_position="20"
-                         k_velocity="20"
-                         soft_lower_limit="${-120.0 * deg_to_rad + wrist_eps}"
-                         soft_upper_limit="${ 120.0 * deg_to_rad - wrist_eps}" />
+      <safety_controller k_position="20" k_velocity="20" soft_lower_limit="${-120.0 * deg_to_rad + wrist_eps}" soft_upper_limit="${ 120.0 * deg_to_rad - wrist_eps}" />
     </joint>
 
     <link name="${name}_6_link">
@@ -85,15 +86,11 @@
         <origin xyz="-0.000153 -0.003122 0.000183" rpy="0.00000 0.00000 0.00000"/>
         <xacro:if value="${wrist_model == 'wrist-2010'}">
           <mass value="0.370063"/>
-          <inertia ixx="0.00021500000" ixy="0.00000000000" ixz="0.00000000000"
-                   iyy="0.00017000000" iyz="0.00000200000"
-                   izz="0.00017400000"/>
+          <inertia ixx="0.00021500000" ixy="0.00000000000" ixz="0.00000000000" iyy="0.00017000000" iyz="0.00000200000" izz="0.00017400000"/>
         </xacro:if>
         <xacro:if value="${wrist_model == 'wrist-2017'}">
           <mass value="0.30275767222" />
-          <inertia ixx="3.29233557E-05" ixy="6.31537395E-08" ixz="-4.567124912E-11"
-                   iyy="3.85334410118923E-05" iyz="-2.01613082836742E-07"
-                   izz="3.33282849168039E-05" />
+          <inertia ixx="3.29233557E-05" ixy="6.31537395E-08" ixz="-4.567124912E-11" iyy="3.85334410118923E-05" iyz="-2.01613082836742E-07" izz="3.33282849168039E-05" />
         </xacro:if>
       </inertial>
       <visual>
@@ -111,13 +108,6 @@
       </collision>
     </link>
 
-    <xacro:if value="${wrist_model == 'wrist-2010'}">
-      <xacro:property name="wrist_6_range"           value="${ 81 if has_ft_sensor else 90 }"/>
-    </xacro:if>
-    <xacro:if value="${wrist_model == 'wrist-2017'}">
-      <xacro:property name="wrist_6_range"           value="81"/>
-    </xacro:if>
-
     <joint name="${name}_6_joint" type="revolute">
       <parent link="${name}_5_link" />
       <child link="${name}_6_link" />
@@ -126,10 +116,7 @@
       <limit lower="${-wrist_6_range * deg_to_rad}" upper="${wrist_6_range * deg_to_rad}" effort="${wrist_2_max_effort}" velocity="${wrist_2_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
 
-      <safety_controller k_position="20"
-                         k_velocity="20"
-                         soft_lower_limit="${-wrist_6_range * deg_to_rad + wrist_eps}"
-                         soft_upper_limit="${ wrist_6_range * deg_to_rad - wrist_eps}" />
+      <safety_controller k_position="20" k_velocity="20" soft_lower_limit="${-wrist_6_range * deg_to_rad + wrist_eps}" soft_upper_limit="${ wrist_6_range * deg_to_rad - wrist_eps}" />
     </joint>
 
     <link name="${name}_7_link">
@@ -137,15 +124,11 @@
         <origin xyz="0.000010 -0.000003 -0.007774" rpy="0.00000 0.00000 0.00000"/>
         <xacro:if value="${wrist_model == 'wrist-2010'}">
           <mass value="0.234252"/>
-          <inertia ixx="0.00014200000" ixy="0.00000000000" ixz="0.00000000000"
-                   iyy="0.00011300000" iyz="0.00000000000"
-                   izz="0.00005200000"/>
+          <inertia ixx="0.00014200000" ixy="0.00000000000" ixz="0.00000000000" iyy="0.00011300000" iyz="0.00000000000" izz="0.00005200000"/>
         </xacro:if>
         <xacro:if value="${wrist_model == 'wrist-2017'}">
           <mass value="0.100" />
-          <inertia ixx="1.14959795E-05" ixy="-1.390727219E-07" ixz="5.930207406E-09"
-                   iyy="1.13594084240734E-05" iyz="-1.78396260812528E-08"
-                   izz="2.01898984804048E-05" />
+          <inertia ixx="1.14959795E-05" ixy="-1.390727219E-07" ixz="5.930207406E-09" iyy="1.13594084240734E-05" iyz="-1.78396260812528E-08" izz="2.01898984804048E-05" />
         </xacro:if>
       </inertial>
     </link>
@@ -157,11 +140,7 @@
       <axis xyz="0 0 1" />
       <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_3_max_effort}" velocity="${wrist_3_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
-
-      <safety_controller k_position="20"
-                         k_velocity="20"
-                         soft_lower_limit="${-120.0 * deg_to_rad + wrist_eps}"
-                         soft_upper_limit="${ 120.0 * deg_to_rad - wrist_eps}" />
+      <safety_controller k_position="20" k_velocity="20" soft_lower_limit="${-120.0 * deg_to_rad + wrist_eps}" soft_upper_limit="${ 120.0 * deg_to_rad - wrist_eps}" />
     </joint>
 
     <gazebo reference="${name}_5_link">
@@ -178,14 +157,14 @@
     </gazebo>
 
     <gazebo reference="${name}_5_joint">
-        <implicitSpringDamper>1</implicitSpringDamper>
+      <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
     <gazebo reference="${name}_6_joint">
-        <implicitSpringDamper>1</implicitSpringDamper>
+      <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
     <gazebo reference="${name}_7_joint">
-        <implicitSpringDamper>1</implicitSpringDamper>
-        <provideFeedback>1</provideFeedback>
+      <implicitSpringDamper>1</implicitSpringDamper>
+      <provideFeedback>1</provideFeedback>
     </gazebo>
 
   </xacro:macro>
