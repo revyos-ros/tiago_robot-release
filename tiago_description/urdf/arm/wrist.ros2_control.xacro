@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- 
-  Copyright (c) 2022 PAL Robotics S.L. All rights reserved.
+  Copyright (c) 2024 PAL Robotics S.L. All rights reserved.
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -14,8 +14,15 @@
   See the License for the specific language governing permissions and
   limitations under the License.
  -->
+
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="ros2_control_wrist_rotational" params="name reduction offset" >
+
+  <!-- INCLUDES -->
+  <xacro:include filename="$(find tiago_description)/ros2_control/transmissions.urdf.xacro" />
+
+  <!-- MACRO DEFINITION -->
+  <xacro:macro name="ros2_control_wrist_rotational" params="name reduction offset">
+
     <joint name="${name}_joint">
       <command_interface name="position" />
       <command_interface name="velocity" />
@@ -26,12 +33,12 @@
       <state_interface name="effort" />
     </joint>
 
-    <xacro:include filename="$(find tiago_description)/ros2_control/transmissions.urdf.xacro" />
     <xacro:tiago_simple_transmission name="${name}" reduction="${reduction}" offset_value="${offset}" />
+
   </xacro:macro>
 
-  <xacro:macro name="ros2_control_wrist_differential"
-               params="name number_1 number_2 act_reduction_1 act_reduction_2 jnt_reduction_1 jnt_reduction_2 number_1_offset number_2_offset" >
+  <xacro:macro name="ros2_control_wrist_differential" params="name number_1 number_2 act_reduction_1 act_reduction_2 jnt_reduction_1 jnt_reduction_2 number_1_offset number_2_offset">
+
     <joint name="${name}_${number_1}_joint">
       <command_interface name="position" />
       <command_interface name="velocity" />
@@ -52,12 +59,8 @@
       <state_interface name="effort" />
     </joint>
 
-    <xacro:include filename="$(find tiago_description)/ros2_control/transmissions.urdf.xacro" />
-    <xacro:tiago_differential_transmission
-      name="${name}" number_1="${number_1}" number_2="${number_2}"
-      act_reduction_1="${act_reduction_1}" act_reduction_2="${act_reduction_2}"
-      jnt_reduction_1="${jnt_reduction_1}" jnt_reduction_2="${jnt_reduction_2}"
-      number_1_offset="${number_1_offset}" number_2_offset="${number_2_offset}"/>
+    <xacro:tiago_differential_transmission name="${name}" number_1="${number_1}" number_2="${number_2}" act_reduction_1="${act_reduction_1}" act_reduction_2="${act_reduction_2}" jnt_reduction_1="${jnt_reduction_1}" jnt_reduction_2="${jnt_reduction_2}" number_1_offset="${number_1_offset}" number_2_offset="${number_2_offset}"/>
 
   </xacro:macro>
+
 </robot>

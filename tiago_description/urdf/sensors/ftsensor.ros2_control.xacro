@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- 
-  Copyright (c) 2022 PAL Robotics S.L. All rights reserved.
+  Copyright (c) 2024 PAL Robotics S.L. All rights reserved.
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -14,8 +14,12 @@
   See the License for the specific language governing permissions and
   limitations under the License.
  -->
+
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- MACRO DEFINITION -->
   <xacro:macro name="ros2_control_force_torque_sensor" params="name">
+
     <sensor name="${name}">
       <state_interface name="force.x"/>
       <state_interface name="force.y"/>
@@ -24,5 +28,7 @@
       <state_interface name="torque.y"/>
       <state_interface name="torque.z"/>
     </sensor>
+
   </xacro:macro>
+
 </robot>

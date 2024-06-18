@@ -2,6 +2,83 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.2.13 (2024-06-05)
+-------------------
+* Merge branch 'feat/motions' into 'humble-devel'
+  pre-recorded_motions
+  See merge request robots/tiago_robot!292
+* delete sensor files and fix launch
+* delete sensor files and added epick file
+* linters
+* remove motinos from end-effectors specifics
+* add motions in general
+* add conditionfor no-arm
+* create general motion file & merge them
+* add custom file for posible costumers
+* Merge branch 'dtk/fix/is-public-sim' into 'humble-devel'
+  Fix missing public sim arg
+  See merge request robots/tiago_robot!290
+* Fix missing public sim arg
+* Merge branch 'fix/motion_planner_files' into 'humble-devel'
+  Fix/motion planner files
+  See merge request robots/tiago_robot!287
+* new file names
+* Contributors: Aina, Aina Irisarri, David ter Kuile, davidterkuile
+
+4.2.12 (2024-05-10)
+-------------------
+
+4.2.11 (2024-05-09)
+-------------------
+
+4.2.10 (2024-05-09)
+-------------------
+* Merge branch 'omm/fix/joy_device' into 'humble-devel'
+  Added proper joy device setup
+  See merge request robots/tiago_robot!283
+* Added proper joy device setup
+* Contributors: davidterkuile, oscarmartinez
+
+4.2.9 (2024-05-07)
+------------------
+* Merge branch 'omm/fix/twist_mux_base_type' into 'humble-devel'
+  Passing base_type to twist_mux from the bringup properly
+  See merge request robots/tiago_robot!282
+* Passing base_type to twist_mux from the bringup properlyy
+* Merge branch 'dtk/fix/robot-state-publisher' into 'humble-devel'
+  Dtk/fix/robot state publisher
+  See merge request robots/tiago_robot!281
+* Remove robot state publisher from tiago_bringup
+* Merge branch 'omm/feat/new_joy_config' into 'humble-devel'
+  New Joy config
+  See merge request robots/tiago_robot!280
+* Fixed 1.0 default value
+* Cleaning old config files
+* Contributors: davidterkuile, oscarmartinez
+
+4.2.8 (2024-04-30)
+------------------
+* Merge branch 'omm/fix/urdf_complete_std' into 'humble-devel'
+  URDF std
+  See merge request robots/tiago_robot!278
+* Module, joy config and restored support for tiago dual
+* Omni related checks and files
+* Suggested changes
+* Launch files moved to TIAGo family standard
+* Contributors: Oscar, davidterkuile
+
+4.2.7 (2024-04-22)
+------------------
+
+4.2.6 (2024-04-16)
+------------------
+
+4.2.5 (2024-04-10)
+------------------
+
+4.2.4 (2024-03-06)
+------------------
+
 4.2.3 (2024-02-28)
 ------------------
 * Rename approach_planner config to motion_planner

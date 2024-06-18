@@ -12,68 +12,92 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-
+from dataclasses import dataclass
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch.actions import OpaqueFunction
-
-from launch_pal.arg_utils import read_launch_argument
-from launch_pal.include_utils import include_launch_py_description
-from launch_pal.robot_utils import (get_arm,
-                                    get_end_effector,
-                                    get_ft_sensor,
-                                    get_robot_name)
-
+from launch_pal.arg_utils import LaunchArgumentsBase
+from launch.substitutions import PathJoinSubstitution, LaunchConfiguration
+from launch_pal.robot_arguments import TiagoArgs
+from launch.actions import DeclareLaunchArgument, SetLaunchConfiguration, OpaqueFunction
 from tiago_description.tiago_launch_utils import get_tiago_hw_suffix
+from launch_pal.include_utils import include_scoped_launch_py_description
+from launch_pal.arg_utils import CommonArgs, read_launch_argument
+from launch_pal.param_utils import merge_param_files
 
 
-def declare_args(context, *args, **kwargs):
+@dataclass(frozen=True)
+class LaunchArguments(LaunchArgumentsBase):
 
-    robot_name = read_launch_argument('robot_name', context)
-
-    return [get_arm(robot_name),
-            get_end_effector(robot_name),
-            get_ft_sensor(robot_name)]
-
-
-def launch_setup(context, *args, **kwargs):
-
-    arm = read_launch_argument('arm', context)
-    end_effector = read_launch_argument('end_effector', context)
-    ft_sensor = read_launch_argument('ft_sensor', context)
-
-    hw_suffix = get_tiago_hw_suffix(arm=arm, end_effector=end_effector, ft_sensor=ft_sensor)
-
-    motions_file = f"tiago_motions{hw_suffix}.yaml"
-    motions_file_path = os.path.join(
-        get_package_share_directory('tiago_bringup'),
-        'config', 'motions', motions_file)
-
-    motion_planner_file = f"motion_planner{hw_suffix}.yaml"
-    motion_planner_config = os.path.join(
-        get_package_share_directory('tiago_bringup'),
-        'config', 'motion_planner', motion_planner_file)
-
-    play_motion2 = include_launch_py_description(
-        'play_motion2', ['launch', 'play_motion2.launch.py'],
-        launch_arguments={'motions_file': motions_file_path,
-                          'motion_planner_config': motion_planner_config}.items())
-
-    return [play_motion2]
+    arm_type: DeclareLaunchArgument = TiagoArgs.arm_type
+    end_effector: DeclareLaunchArgument = TiagoArgs.end_effector
+    ft_sensor: DeclareLaunchArgument = TiagoArgs.ft_sensor
+    use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
 
 
 def generate_launch_description():
 
+    # Create the launch description and populate
     ld = LaunchDescription()
+    launch_arguments = LaunchArguments()
 
-    # Declare arguments
-    # we use OpaqueFunction so the callbacks have access to the context
-    ld.add_action(get_robot_name('tiago'))
-    ld.add_action(OpaqueFunction(function=declare_args))
+    launch_arguments.add_to_launch_description(ld)
 
-    # Launch play_motion2 with the proper config
-    ld.add_action(OpaqueFunction(function=launch_setup))
+    declare_actions(ld, launch_arguments)
 
     return ld
+
+
+def declare_actions(
+    launch_description: LaunchDescription, launch_args: LaunchArguments
+):
+    launch_description.add_action(OpaqueFunction(function=create_play_motion_params))
+
+    play_motion2 = include_scoped_launch_py_description(
+        pkg_name="play_motion2",
+        paths=["launch", "play_motion2.launch.py"],
+        launch_arguments={
+            "use_sim_time": launch_args.use_sim_time,
+            "motions_file": LaunchConfiguration("motions_file"),
+            "motion_planner_config": LaunchConfiguration("motion_planner_config"),
+        },
+    )
+
+    launch_description.add_action(play_motion2)
+
+    return
+
+
+def create_play_motion_params(context):
+
+    pkg_name = "tiago_bringup"
+    pkg_share_dir = get_package_share_directory(pkg_name)
+    arm = read_launch_argument("arm_type", context),
+
+    hw_suffix = get_tiago_hw_suffix(
+        arm=read_launch_argument("arm_type", context),
+        end_effector=read_launch_argument("end_effector", context),
+    )
+
+    motions_file = f"tiago_motions{hw_suffix}.yaml"
+    motions_yaml = PathJoinSubstitution(
+        [pkg_share_dir, "config", "motions", motions_file]
+    )
+    general_yaml = PathJoinSubstitution(
+        [pkg_share_dir, "config", "motions", "tiago_motions_general.yaml"]
+    )
+    if (arm != 'no-arm'):
+        merged_yaml = merge_param_files([motions_yaml.perform(context),
+                                         general_yaml.perform(context)])
+    else:
+        merged_yaml = motions_yaml
+
+    motion_planner_file = f"motion_planner{hw_suffix}.yaml"
+    motion_planner_config = PathJoinSubstitution(
+        [pkg_share_dir, "config", "motion_planner", motion_planner_file]
+    )
+
+    return [
+        SetLaunchConfiguration("motions_file", merged_yaml),
+        SetLaunchConfiguration("motion_planner_config", motion_planner_config),
+    ]

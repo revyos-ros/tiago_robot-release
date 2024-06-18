@@ -17,7 +17,8 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-install(PROGRAMS scripts/regen_em_file.py
+install(
+  PROGRAMS scripts/regen_em_file.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
