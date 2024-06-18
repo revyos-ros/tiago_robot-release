@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- 
-  Copyright (c) 2022 PAL Robotics S.L. All rights reserved.
+  Copyright (c) 2024 PAL Robotics S.L. All rights reserved.
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -14,19 +14,24 @@
   See the License for the specific language governing permissions and
   limitations under the License.
  -->
-<robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="force_torque_sensor_gazebo" params="name update_rate">
-  <gazebo reference="${name}_joint">
-    <preserveFixedJoint>true</preserveFixedJoint> <!-- in case this is in a fixed joint -->
-    <sensor name="${name}_sensor" type="force_torque">
-      <update_rate>${update_rate}</update_rate>
-      <visualize>true</visualize>
-      <force_torque>
-        <frame>child</frame>
-        <measure_direction>child_to_parent</measure_direction>
-      </force_torque>
-    </sensor>
-</gazebo>
 
-</xacro:macro>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- MACRO DEFINITION -->
+  <xacro:macro name="force_torque_sensor_gazebo" params="name update_rate">
+
+    <gazebo reference="${name}_joint">
+      <preserveFixedJoint>true</preserveFixedJoint>      <!-- in case this is in a fixed joint -->
+      <sensor name="${name}_sensor" type="force_torque">
+        <update_rate>${update_rate}</update_rate>
+        <visualize>true</visualize>
+        <force_torque>
+          <frame>child</frame>
+          <measure_direction>child_to_parent</measure_direction>
+        </force_torque>
+      </sensor>
+    </gazebo>
+
+  </xacro:macro>
+
 </robot>
