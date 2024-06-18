@@ -12,6 +12,7 @@ play_motion2:
           name: Home
           usage: demo
           description: 'Go home'
+
       head_tour:
         joints: [head_1_joint, head_2_joint]
         positions: [0.0, 0.0,
@@ -27,4 +28,18 @@ play_motion2:
           name: Head Tour
           usage: demo
           description: 'head_tour'
+
+      inspect_surroundings:
+        joints: ['head_1_joint', 'head_2_joint']
+        positions: [-1., -0.85,
+                    -1., -0.85,
+                    1., -0.85,
+                    1., -0.85,
+                    0., -0.85]
+        times_from_start: [1.5, 2.0, 4.5, 5.0, 7.0]
+        meta:
+          name: Inspect Surroundings
+          usage: demo
+          description: 'Inspect surroundings around the robot'       
+
 

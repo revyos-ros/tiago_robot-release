@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- 
-  Copyright (c) 2022 PAL Robotics S.L. All rights reserved.
+  Copyright (c) 2024 PAL Robotics S.L. All rights reserved.
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,17 +15,15 @@
   limitations under the License.
  -->
 
-
 <!--  Orbbec Astra based off ASUS Xtion Pro Live-->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
+  <!-- INCLUDES -->
   <xacro:include filename="$(find tiago_description)/urdf/sensors/openni.gazebo.xacro" />
+  <xacro:include filename="${extrinsic_calibration_dir}/extrinsic_camera_calibration_constants.urdf.xacro" />
 
-  <!-- Macro -->
+  <!-- MACRO DEFINITION-->
   <xacro:macro name="orbbec_astra" params="name parent camera_model *origin *optical_origin extrinsic_calibration_dir">
-
-    <!-- includes -->
-    <xacro:include filename="${extrinsic_calibration_dir}/extrinsic_camera_calibration_constants.urdf.xacro" />
 
     <!-- frames in the center of the camera -->
     <joint name="${name}_joint" type="fixed">
@@ -38,9 +36,7 @@
       <inertial>
         <origin xyz="-0.00936000000 -0.00003000000 -0.00273000000" rpy="0 0 0"/>
         <mass value="0.21970000000"/>
-        <inertia ixx="0.00000429247" ixy="0.00000000000" ixz="0.00000002565"
-                 iyy="0.00000008027" iyz="0.00000000000"
-                 izz="0.00000427339"/>
+        <inertia ixx="0.00000429247" ixy="0.00000000000" ixz="0.00000002565" iyy="0.00000008027" iyz="0.00000000000" izz="0.00000427339"/>
       </inertial>
       <!--
       <visual>
@@ -71,9 +67,7 @@
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="0.001"/>
-        <inertia ixx="0.00001" ixy="0" ixz="0"
-                 iyy="0.00001" iyz="0"
-                 izz="0.00001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
       </inertial>
     </link>
 
@@ -92,9 +86,7 @@
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="0.001"/>
-        <inertia ixx="0.00001" ixy="0" ixz="0"
-                 iyy="0.00001" iyz="0"
-                 izz="0.00001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
       </inertial>
     </link>
 
@@ -109,9 +101,7 @@
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="0.001"/>
-        <inertia ixx="0.00001" ixy="0" ixz="0"
-                 iyy="0.00001" iyz="0"
-                 izz="0.00001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
       </inertial>
     </link>
 
@@ -125,9 +115,7 @@
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="0.001"/>
-        <inertia ixx="0.00001" ixy="0" ixz="0"
-                 iyy="0.00001" iyz="0"
-                 izz="0.00001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
       </inertial>
     </link>
 
@@ -142,9 +130,7 @@
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="0.001"/>
-        <inertia ixx="0.00001" ixy="0" ixz="0"
-                 iyy="0.00001" iyz="0"
-                 izz="0.00001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
       </inertial>
     </link>
 
@@ -158,13 +144,11 @@
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="0.001"/>
-        <inertia ixx="0.00001" ixy="0" ixz="0"
-                 iyy="0.00001" iyz="0"
-                 izz="0.00001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
       </inertial>
     </link>
 
-    <!-- extensions -->
+    <!-- Gazebo config -->
     <xacro:openni_camera_gazebo_v0 name="${name}" />
 
   </xacro:macro>
