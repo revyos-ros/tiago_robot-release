@@ -21,7 +21,7 @@ from launch.actions import DeclareLaunchArgument, SetLaunchConfiguration, Opaque
 from launch_ros.actions import Node
 from launch.conditions import LaunchConfigurationNotEquals
 from launch_pal.arg_utils import LaunchArgumentsBase, read_launch_argument
-from launch_pal.robot_arguments import TiagoArgs
+from tiago_description.launch_arguments import TiagoArgs
 
 from dataclasses import dataclass
 
