@@ -26,8 +26,8 @@ from launch_param_builder import load_xacro
 from launch_pal.arg_utils import read_launch_argument
 from launch_pal.arg_utils import LaunchArgumentsBase
 from dataclasses import dataclass
-from launch_pal.robot_arguments import TiagoArgs
-from launch_pal.arg_utils import CommonArgs
+from tiago_description.launch_arguments import TiagoArgs
+from launch_pal.robot_arguments import CommonArgs
 
 
 @dataclass(frozen=True)
