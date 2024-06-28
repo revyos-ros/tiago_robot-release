@@ -164,9 +164,6 @@
   <!-- Materials for visualization -->
   <xacro:include filename="$(find pal_urdf_utils)/urdf/materials.urdf.xacro" />
 
-  <!-- Generic simulator_gazebo plugins -->
-  <xacro:include filename="$(find tiago_description)/gazebo/gazebo.urdf.xacro" />
-
   <!-- ROS 2 control -->
   <xacro:include filename="$(find tiago_description)/ros2_control/ros2_control.urdf.xacro" />
 
@@ -174,7 +171,7 @@
 
   <!-- Base -->
   <xacro:if value="${base_type == 'pmb2'}">
-    <xacro:base_sensors name="base" laser_model="${laser_model}" sonars="true" microphone="true"/>
+    <xacro:base_sensors name="base" laser_model="${laser_model}" has_sonars="true" has_microphone="true"/>
   </xacro:if>
   <xacro:if value="${base_type == 'omni_base'}">
     <xacro:base_sensors name="base" front_laser_model="${laser_model}" rear_laser_model="${laser_model}"/>
