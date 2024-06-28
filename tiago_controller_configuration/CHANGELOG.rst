@@ -2,6 +2,32 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.2.16 (2024-06-28)
+-------------------
+* Add imu sensor broadcaster
+* Contributors: davidterkuile
+
+4.2.15 (2024-06-26)
+-------------------
+* Merge branch 'dtk/move-robot-args' into 'humble-devel'
+  Change imports for robot arguments
+  See merge request robots/tiago_robot!297
+* Change imports for robot arguments
+* Contributors: David ter Kuile, davidterkuile
+
+4.2.14 (2024-06-25)
+-------------------
+* Merge branch 'dtk/fix/base-urdf' into 'humble-devel'
+  Dtk/fix/base urdf
+  See merge request robots/tiago_robot!295
+* Add imu gazebo plugin and imu sensor broadcaster
+* Move ros2 control gazebo
+* Merge branch 'fix/remove_pmb2_extra_joints' into 'humble-devel'
+  Remove casters and suspension from joint_state_broadcaster
+  See merge request robots/tiago_robot!296
+* Remove casters and suspension from joint_state_broadcaster
+* Contributors: David ter Kuile, Jordan Palacios, Noel Jimenez, davidterkuile
+
 4.2.13 (2024-06-05)
 -------------------
 * Merge branch 'feat/motions' into 'humble-devel'
