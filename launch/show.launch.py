@@ -20,8 +20,8 @@ from launch_pal.include_utils import include_scoped_launch_py_description
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 from launch_pal.arg_utils import LaunchArgumentsBase
-from launch_pal.robot_arguments import TiagoArgs
-from launch_pal.arg_utils import CommonArgs
+from tiago_description.launch_arguments import TiagoArgs
+from launch_pal.robot_arguments import CommonArgs
 
 
 @dataclass(frozen=True)
