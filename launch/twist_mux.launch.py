@@ -17,9 +17,10 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, OpaqueFunction, SetLaunchConfiguration
 from ament_index_python.packages import get_package_share_directory
 from launch_pal.include_utils import include_scoped_launch_py_description
-from launch_pal.arg_utils import LaunchArgumentsBase, CommonArgs, read_launch_argument
+from launch_pal.arg_utils import LaunchArgumentsBase, read_launch_argument
+from launch_pal.robot_arguments import CommonArgs
 from launch.substitutions import LaunchConfiguration
-from launch_pal.robot_arguments import TiagoArgs
+from tiago_description.launch_arguments import TiagoArgs
 from dataclasses import dataclass
 
 
