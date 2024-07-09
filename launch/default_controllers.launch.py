@@ -17,7 +17,6 @@ from dataclasses import dataclass
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import GroupAction, OpaqueFunction, SetLaunchConfiguration
-from launch_pal.param_utils import merge_param_files
 from launch_pal.arg_utils import read_launch_argument
 from controller_manager.launch_utils import generate_load_controller_launch_description
 from launch_pal.arg_utils import LaunchArgumentsBase
@@ -59,9 +58,10 @@ def declare_actions(
     launch_description: LaunchDescription, launch_args: LaunchArguments
 ):
     # Create the extra configs from the LAs
-    launch_description.add_action(OpaqueFunction(function=create_base_configs))
+    pkg_share_folder = get_package_share_directory(
+        "tiago_controller_configuration")
 
-    pkg_share_folder = get_package_share_directory("tiago_controller_configuration")
+    launch_description.add_action(OpaqueFunction(function=create_base_configs))
 
     # Base controller
     base_controller = GroupAction(
@@ -69,24 +69,13 @@ def declare_actions(
             generate_load_controller_launch_description(
                 controller_name="mobile_base_controller",
                 controller_type=LaunchConfiguration("controller_type"),
-                controller_params_file=LaunchConfiguration("base_params"),
+                controller_params_file=LaunchConfiguration("base_config_file")
             )
-        ],
-        condition=IfCondition(
-            PythonExpression(
-                [
-                    "'",
-                    LaunchConfiguration("use_sim_time"),
-                    "' != 'True' or '",
-                    LaunchConfiguration("base_type"),
-                    "' != 'omni_base'",
-                ]
-            )
-        ),
+        ]
     )
+
     launch_description.add_action(base_controller)
 
-    # Joint state broadcaster
     joint_state_broadcaster = GroupAction(
         [
             generate_load_controller_launch_description(
@@ -195,20 +184,10 @@ def declare_actions(
 
 def create_base_configs(context, *args, **kwargs):
 
-    base_launch_configs = []
     base_type = read_launch_argument("base_type", context)
-    pkg_share_folder = get_package_share_directory("tiago_controller_configuration")
-
-    # Create base controller params config
-    base_params = os.path.join(
-        pkg_share_folder, "config", f"{base_type}_controller.yaml"
-    )
-
-    calibration_config = "/etc/calibration/master_calibration.yaml"
-    if os.path.exists(calibration_config):
-        base_params = merge_param_files([base_params, calibration_config])
-
-    base_launch_configs.append(SetLaunchConfiguration("base_params", base_params))
+    base_share_pkg_folder = get_package_share_directory(
+        base_type + "_controller_configuration")
+    base_config_file = base_share_pkg_folder + "/config/mobile_base_controller.yaml"
 
     # Create controller type config
     if base_type == "pmb2":
@@ -216,11 +195,8 @@ def create_base_configs(context, *args, **kwargs):
     else:
         controller_type = "omni_drive_controller/OmniDriveController"
 
-    base_launch_configs.append(
-        SetLaunchConfiguration("controller_type", controller_type)
-    )
-
-    return base_launch_configs
+    return [SetLaunchConfiguration("base_config_file", base_config_file),
+            SetLaunchConfiguration("controller_type", controller_type)]
 
 
 def configure_end_effector(context, *args, **kwargs):
