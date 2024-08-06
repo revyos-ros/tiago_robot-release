@@ -2,6 +2,22 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.2.21 (2024-08-05)
+-------------------
+
+4.2.20 (2024-07-29)
+-------------------
+
+4.2.19 (2024-07-25)
+-------------------
+* Change parameter to arm_type
+* Contributors: thomas.peyrucain
+
+4.2.18 (2024-07-09)
+-------------------
+* Add warning for pal_module_cmake not found
+* Contributors: Noel Jimenez
+
 4.2.17 (2024-07-08)
 -------------------
 * change module name into 10\_*

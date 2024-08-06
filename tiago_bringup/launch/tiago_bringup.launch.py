@@ -65,7 +65,7 @@ def declare_actions(
             "end_effector": launch_args.end_effector,
             "ft_sensor": launch_args.ft_sensor,
             "base_type": launch_args.base_type,
-            "use_sim_time": launch_args.use_sim_time,
+            "is_public_sim": launch_args.is_public_sim,
         },
     )
 
