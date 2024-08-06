@@ -38,7 +38,7 @@ class LaunchArguments(LaunchArgumentsBase):
     arm_type: DeclareLaunchArgument = TiagoArgs.arm_type
     end_effector: DeclareLaunchArgument = TiagoArgs.end_effector
     ft_sensor: DeclareLaunchArgument = TiagoArgs.ft_sensor
-    use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
+    is_public_sim: DeclareLaunchArgument = CommonArgs.is_public_sim
 
 
 def generate_launch_description():
@@ -185,9 +185,13 @@ def declare_actions(
 def create_base_configs(context, *args, **kwargs):
 
     base_type = read_launch_argument("base_type", context)
+    is_public_sim = read_launch_argument("is_public_sim", context)
     base_share_pkg_folder = get_package_share_directory(
         base_type + "_controller_configuration")
     base_config_file = base_share_pkg_folder + "/config/mobile_base_controller.yaml"
+
+    if is_public_sim and (base_type == "pmb2"):
+        base_config_file = base_share_pkg_folder + "/config/mobile_base_controller_public_sim.yaml"
 
     # Create controller type config
     if base_type == "pmb2":
