@@ -1,0 +1,12 @@
+Source: ros-humble-tiago-robot
+Section: misc
+Priority: optional
+Maintainer: Jordan Palacios <jordan.palacios@pal-robotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake, ros-humble-ros-workspace
+Homepage: https://github.com/pal-robotics/tiago_simulation
+Standards-Version: 3.9.2
+
+Package: ros-humble-tiago-robot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-tiago-bringup, ros-humble-tiago-controller-configuration, ros-humble-tiago-description, ros-humble-ros-workspace
+Description: Description and controller configuration of TIAGo
