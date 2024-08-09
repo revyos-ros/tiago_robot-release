@@ -27,8 +27,7 @@ def generate_launch_description():
         arguments=[
             "gravity_compensation_controller", "--param-file", os.path.join(
                 get_package_share_directory('tiago_controller_configuration'),
-                'config', 'gravity_compensation_controller.yaml'),
-            "--controller-type", "pal_controllers/GravityCompensationController", "--inactive"],
+                'config', 'gravity_compensation_controller.yaml'), "--inactive"],
     )
 
     ld = LaunchDescription()
