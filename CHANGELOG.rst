@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.3.0 (2024-08-07)
+------------------
+* Use controller_type from the controllers config
+* Contributors: Noel Jimenez
+
 4.2.21 (2024-08-05)
 -------------------
 * enable odom tf for pmb2 for public sim
