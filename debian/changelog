@@ -1,0 +1,1121 @@
+ros-humble-tiago-robot (4.3.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 06 Aug 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.21-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 04 Aug 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.20-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 28 Jul 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.19-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 24 Jul 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.18-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 08 Jul 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.17-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 07 Jul 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.16-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 27 Jun 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.15-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 25 Jun 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.14-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 24 Jun 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.13-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 04 Jun 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.12-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 09 May 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.11-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 08 May 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.10-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 08 May 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.9-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 06 May 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.8-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 29 Apr 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.7-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 21 Apr 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.6-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 15 Apr 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.5-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 09 Apr 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.4-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 05 Mar 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.3-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 27 Feb 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.2-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 01 Feb 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.1-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 30 Jan 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.2.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 30 Jan 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.1.2-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 18 Jan 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.1.1-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 18 Jan 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.1.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 17 Jan 2024 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.28-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 21 Dec 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.27-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 17 Dec 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.26-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 13 Dec 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.25-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 11 Dec 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.24-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 11 Dec 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.23-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 10 Dec 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.22-1bookworm) bookworm; urgency=high
+
+  * Update cmake_minimum_required version to 3.8
+  * Contributors: Noel Jimenez
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 21 Nov 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.21-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 14 Nov 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.20-1bookworm) bookworm; urgency=high
+
+  * Add website tag
+  * Contributors: Noel Jimenez
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 13 Nov 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.19-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 12 Nov 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.18-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 06 Nov 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.17-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 18 Oct 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.16-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 17 Sep 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.15-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 03 Sep 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.14-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 19 Jul 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.13-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 10 Jul 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.12-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 04 Jul 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.11-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 27 Jun 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.10-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 13 Jun 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.9-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 10 May 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.8-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 10 May 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.7-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 27 Apr 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.6-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 16 Apr 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.5-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 05 Mar 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.4-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 01 Mar 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.3-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 21 Feb 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.2-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 07 Feb 2023 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.1-1bookworm) bookworm; urgency=high
+
+  * Merge branch 'update_license' into 'humble-devel'
+    Update license
+    See merge request robots/tiago_robot!180
+  * update license
+  * Contributors: Jordan Palacios, Noel Jimenez
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 09 Nov 2022 16:00:00 -0000
+
+ros-humble-tiago-robot (4.0.0-1bookworm) bookworm; urgency=high
+
+  * Merge branch 'update_maintainers' into 'humble-devel'
+    Update maintainers
+    See merge request robots/tiago_robot!163
+  * update maintainers
+  * Migrated package.xml and CMakeLists.txt to ros2 format
+  * Contributors: Jordan Palacios, Noel Jimenez
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 07 Nov 2022 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.55-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 14 Jan 2021 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.54-1bookworm) bookworm; urgency=high
+
+  * Merge branch 'new-endoscopic-dual' of gitlab:robots/tiago_robot into new-endoscopic-dual
+  * Contributors: daniellopez
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 07 Sep 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.53-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 29 Jul 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.52-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 26 Jul 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.51-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 14 Jul 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.50-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 09 Jul 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.49-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 30 Jun 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.48-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 09 Jun 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.47-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 14 May 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.46-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 12 May 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.45-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 11 May 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.44-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 11 May 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.43-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 07 May 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.42-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 06 May 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.41-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 06 May 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.40-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 05 May 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.39-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 20 Apr 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.38-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 26 Feb 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.37-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 13 Feb 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.36-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 27 Jan 2020 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.35-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 05 Nov 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.34-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 29 Oct 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.33-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 20 Oct 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.32-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 15 Oct 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.31-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 09 Oct 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.30-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 01 Oct 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.29-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 26 Sep 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.28-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 24 Sep 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.27-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 16 Sep 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.26-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 17 Jul 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.25-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 08 Jul 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.24-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 07 Jul 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.23-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 06 Jun 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.22-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 20 May 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.21-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 12 May 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.20-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 08 May 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.19-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 01 May 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.18-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 22 Apr 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.17-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 11 Apr 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.16-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 11 Apr 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.15-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 04 Apr 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.14-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 02 Apr 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.13-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 27 Mar 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.12-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 25 Mar 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.11-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 25 Mar 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.10-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 25 Mar 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.9-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 21 Mar 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.8-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 14 Mar 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.7-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 13 Mar 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.6-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 11 Mar 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.5-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 25 Feb 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.4-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 07 Feb 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.3-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 04 Feb 2019 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.2-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 20 Dec 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.1-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 19 Dec 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (2.0.0-1bookworm) bookworm; urgency=high
+
+  * 1.0.23
+  * changelog
+  * Contributors: Procópio Stein
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 18 Dec 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.23-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 04 Dec 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.22-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 03 Dec 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.21-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 28 Nov 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.20-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 18 Nov 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.19-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 22 Oct 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.18-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 18 Sep 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.17-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 16 Sep 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.16-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 05 Aug 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.15-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 05 Aug 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.14-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 31 Jul 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.13-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 31 Jul 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.12-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 29 Jul 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.11-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 12 Jul 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.10-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 09 Jul 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.9-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 23 May 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.8-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 01 May 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.7-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 01 May 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.6-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 09 Apr 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.5-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 28 Mar 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.4-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 25 Mar 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.3-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 15 Mar 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.2-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 05 Mar 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.1-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 21 Feb 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (1.0.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 20 Feb 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.46-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 19 Feb 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.45-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 07 Feb 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.44-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 05 Feb 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.43-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 23 Jan 2018 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.42-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 30 Nov 2017 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.41-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 30 Oct 2017 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.40-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 26 Oct 2017 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.39-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 11 Jul 2017 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.38-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 15 May 2017 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.37-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 04 May 2017 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.36-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 23 Apr 2017 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.35-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 20 Dec 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.34-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sat, 05 Nov 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.33-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 03 Nov 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.32-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 25 Oct 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.31-1bookworm) bookworm; urgency=high
+
+  * 0.0.30
+  * Update changelog
+  * fix licences and maintainers
+  * add myself as maintainer
+  * add myself as maintainer
+  * 0.0.29
+  * Update changelog
+  * 0.0.28
+  * Update changelog
+  * 0.0.27
+  * Update changelog
+  * 0.0.26
+  * Update changelog
+  * 0.0.25
+  * Update changelog
+  * 0.0.24
+  * changelog
+  * 0.0.23
+  * Update changelog
+  * 0.0.22
+  * Update changelog
+  * 0.0.21
+  * Update changelog
+  * 0.0.20
+  * Update changelog
+  * 0.0.19
+  * Update changelog
+  * 0.0.18
+  * changelog
+  * 0.0.17
+  * changelog
+  * 0.0.16
+  * Update changelog
+  * 0.0.15
+  * Update changelog
+  * 0.0.14
+  * Update changelog
+  * 0.0.13
+  * Update changelog
+  * Contributors: Jeremie Deray, Jordi Pages, Sam Pfeiffer, Victor Lopez
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 13 Oct 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.30-1bookworm) bookworm; urgency=high
+
+  * fix licences and maintainers
+  * add myself as maintainer
+  * add myself as maintainer
+  * Contributors: Jordi Pages
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 12 Oct 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.29-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 27 Jul 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.28-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Wed, 27 Jul 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.27-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 18 Jul 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.26-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 07 Jul 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.25-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 27 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.24-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 14 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.23-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 14 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.22-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 14 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.21-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 14 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.20-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 13 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.19-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 13 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.18-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 13 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.17-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 12 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.16-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 12 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.15-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Sun, 12 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.14-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 09 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.13-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 09 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.12-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 06 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.11-1bookworm) bookworm; urgency=high
+
+  * 0.0.10
+  * Updated changelog
+  * 0.0.9
+  * Update changelog
+  * 0.0.8
+  * Update changelog
+  * 0.0.7
+  * Update changelog
+  * 0.0.6
+  * Update changelogs
+  * 0.0.5
+  * Update changelog
+  * Contributors: Hilario Tome, Sam Pfeiffer, Victor Lopez
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Thu, 02 Jun 2016 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.4-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 19 May 2015 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.3-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 14 Apr 2015 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.2-1bookworm) bookworm; urgency=high
+
+
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Tue, 14 Apr 2015 16:00:00 -0000
+
+ros-humble-tiago-robot (0.0.1-1bookworm) bookworm; urgency=high
+
+  * Update run-depends
+  * Initial commit
+  * Contributors: Bence Magyar, Hilario Tome
+
+ -- Jordan Palacios <jordan.palacios@pal-robotics.com>  Mon, 19 Jan 2015 16:00:00 -0000
+
+
