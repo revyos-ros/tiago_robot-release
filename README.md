@@ -1,3 +1,30 @@
+## tiago_robot (humble) - 4.6.0-1
+
+The packages in the `tiago_robot` repository were released into the `humble` distro by running `/home/z572/gits/revyos-ros/venv/bin/bloom-release -r humble tiago_robot --override-release-repository-push-url git@github.com:revyos-ros/tiago_robot-release.git` on `Mon, 23 Sep 2024 13:42:24 -0000`
+
+These packages were released:
+- `tiago_bringup`
+- `tiago_controller_configuration`
+- `tiago_description`
+- `tiago_robot`
+
+Version of package(s) in repository `tiago_robot`:
+
+- upstream repository: https://github.com/pal-robotics/tiago_robot
+- release repository: https://github.com/revyos-ros/tiago_robot-release.git
+- rosdistro version: `4.5.0-1`
+- old version: `4.3.0-1`
+- new version: `4.6.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## tiago_robot (humble) - 4.3.0-1
 
 The packages in the `tiago_robot` repository were released into the `humble` distro by running `/usr/bin/bloom-release --track humble --rosdistro humble -y tiago_robot` on `Fri, 09 Aug 2024 07:14:14 -0000`
