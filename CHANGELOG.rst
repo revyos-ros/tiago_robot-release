@@ -2,6 +2,21 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.6.0 (2024-09-18)
+------------------
+* Add slash to node names on parameter files
+* Contributors: Noel Jimenez
+
+4.5.0 (2024-08-29)
+------------------
+* Use launch file directly from base controller_configuration
+* Contributors: David ter Kuile
+
+4.4.0 (2024-08-22)
+------------------
+* Add dependencies and parameter for motor_model
+* Contributors: Aina
+
 4.3.0 (2024-08-07)
 ------------------
 
