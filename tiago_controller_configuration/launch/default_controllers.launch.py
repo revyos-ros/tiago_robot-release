@@ -16,7 +16,7 @@ import os
 from dataclasses import dataclass
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import GroupAction, OpaqueFunction, SetLaunchConfiguration
+from launch.actions import GroupAction, OpaqueFunction
 from launch_pal.arg_utils import read_launch_argument
 from controller_manager.launch_utils import generate_load_controller_launch_description
 from launch_pal.arg_utils import LaunchArgumentsBase
@@ -28,6 +28,7 @@ from tiago_description.launch_arguments import TiagoArgs
 from launch.conditions import (
     LaunchConfigurationNotEquals,
     IfCondition,
+    UnlessCondition
 )
 
 
@@ -36,9 +37,11 @@ class LaunchArguments(LaunchArgumentsBase):
 
     base_type: DeclareLaunchArgument = TiagoArgs.base_type
     arm_type: DeclareLaunchArgument = TiagoArgs.arm_type
+    arm_motor_model: DeclareLaunchArgument = TiagoArgs.arm_motor_model
     end_effector: DeclareLaunchArgument = TiagoArgs.end_effector
     ft_sensor: DeclareLaunchArgument = TiagoArgs.ft_sensor
     is_public_sim: DeclareLaunchArgument = CommonArgs.is_public_sim
+    use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
 
 
 def generate_launch_description():
@@ -61,19 +64,8 @@ def declare_actions(
     pkg_share_folder = get_package_share_directory(
         "tiago_controller_configuration")
 
-    launch_description.add_action(OpaqueFunction(function=create_base_configs))
-
-    # Base controller
-    base_controller = GroupAction(
-        [
-            generate_load_controller_launch_description(
-                controller_name="mobile_base_controller",
-                controller_params_file=LaunchConfiguration("base_config_file")
-            )
-        ]
-    )
-
-    launch_description.add_action(base_controller)
+    launch_description.add_action(
+        OpaqueFunction(function=launch_mobile_base_controller))
 
     joint_state_broadcaster = GroupAction(
         [
@@ -142,6 +134,17 @@ def declare_actions(
 
     launch_description.add_action(arm_controller)
 
+    # Gravity compensation controller
+    gravity_compensation_controller = include_scoped_launch_py_description(
+        pkg_name="tiago_controller_configuration",
+        paths=["launch", "gravity_compensation_controller.launch.py"],
+        launch_arguments={"arm_motor_model": launch_args.arm_motor_model,
+                          "end_effector": launch_args.end_effector},
+        condition=UnlessCondition(LaunchConfiguration("is_public_sim"))
+    )
+
+    launch_description.add_action(gravity_compensation_controller)
+
     # FT Sensor
     ft_sensor_controller = GroupAction(
         [
@@ -175,18 +178,24 @@ def declare_actions(
     return
 
 
-def create_base_configs(context, *args, **kwargs):
+def launch_mobile_base_controller(context, *args, **kwargs):
 
     base_type = read_launch_argument("base_type", context)
+    use_sim_time = read_launch_argument("use_sim_time", context)
     is_public_sim = read_launch_argument("is_public_sim", context)
-    base_share_pkg_folder = get_package_share_directory(
-        base_type + "_controller_configuration")
-    base_config_file = base_share_pkg_folder + "/config/mobile_base_controller.yaml"
 
-    if is_public_sim and (base_type == "pmb2"):
-        base_config_file = base_share_pkg_folder + "/config/mobile_base_controller_public_sim.yaml"
+    base_controller_package = base_type + "_controller_configuration"
 
-    return [SetLaunchConfiguration("base_config_file", base_config_file)]
+    mobile_base_controller = include_scoped_launch_py_description(
+        pkg_name=base_controller_package,
+        paths=["launch", "mobile_base_controller.launch.py"],
+        launch_arguments={
+            "use_sim_time": use_sim_time,
+            "is_public_sim": is_public_sim,
+        }
+    )
+
+    return [mobile_base_controller]
 
 
 def configure_end_effector(context, *args, **kwargs):
