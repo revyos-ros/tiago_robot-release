@@ -2,6 +2,25 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.6.0 (2024-09-18)
+------------------
+
+4.5.0 (2024-08-29)
+------------------
+* Use launch file directly from base controller_configuration
+* Don't load gravity compensation in public sim
+* Contributors: David ter Kuile
+
+4.4.0 (2024-08-22)
+------------------
+* Fix flake8
+* Add gravity compensation support for all grippers + improve launch file
+* Fix rebase issues + add arm_motor_model to module
+* Add dependencies and parameter for motor_model
+* Add gravity compensation controller as default controller loaded inactive
+* gravity compensation controller loaded in the default controllers
+* Contributors: Aina, ileniaperrella, thomas.peyrucain
+
 4.3.0 (2024-08-07)
 ------------------
 * Use controller_type from the controllers config

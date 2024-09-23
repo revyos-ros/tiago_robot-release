@@ -5,7 +5,7 @@ gravity_compensation_controller:
 
     root_link: "base_link"
 
-    tip_links: ["gripper_link"]
+    tip_links: ["${EE_TIP_LINK}"]
 
     torque_gain: 1.0
 
@@ -16,22 +16,22 @@ gravity_compensation_controller:
         kp: 6.0
         kd: 1.0
       arm_2_joint:
-        motor_torque_constant: 0.136
+        motor_torque_constant: 0.12
         reduction_ratio: 100.0
         kp: 6.0
         kd: 0.8
       arm_3_joint:
-        motor_torque_constant: -0.087
+        motor_torque_constant: -0.06
         reduction_ratio: 100.0
         kp: -6.0
         kd: -0.8
       arm_4_joint:
-        motor_torque_constant: -0.087
+        motor_torque_constant: -0.06
         reduction_ratio: 100.0
         kp: -6.0
         kd: -0.8
       arm_5_joint:
-        motor_torque_constant: -1.0
+        motor_torque_constant: -1.65
         reduction_ratio: 336.0
         kp: -0.02
         kd: -0.02

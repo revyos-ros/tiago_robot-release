@@ -30,6 +30,7 @@ class TiagoArgs:
 
     base_type: DLA = __arg_creator.get_argument('base_type')
     arm_type: DLA = __arg_creator.get_argument('arm_type')
+    arm_motor_model: DLA = __arg_creator.get_argument('arm_motor_model')
     end_effector: DLA = __arg_creator.get_argument('end_effector')
     ft_sensor: DLA = __arg_creator.get_argument('ft_sensor')
     wrist_model: DLA = __arg_creator.get_argument('wrist_model')
