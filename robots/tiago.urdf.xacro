@@ -45,7 +45,7 @@
   <xacro:arg name="ft_sensor" default="schunk-ft"/>
 
   <!-- wrist-2010, wrist-2017 -->
-  <xacro:arg name="wrist_model" default="wrist-2010"/>
+  <xacro:arg name="wrist_model" default="wrist-2017"/>
 
   <!-- no-end-effector, pal-gripper, pal-hey5, custom, robotiq-2f-85,robotiq-2f-140-->
   <xacro:arg name="end_effector" default="pal-hey5"/>
@@ -178,7 +178,14 @@
   </xacro:if>
 
   <!-- Torso -->
-  <xacro:tiago_torso name="torso" parent="base_link"/>
+  <xacro:tiago_torso name="torso" parent="base_link">
+    <xacro:if value="${base_type == 'pmb2'}">
+      <origin rpy="0 0 0" xyz="-0.062 0.0 0.193" />
+    </xacro:if>
+    <xacro:if value="${base_type == 'omni_base'}">
+      <origin rpy="0 0 0" xyz="-0.062 0.0 0.215" />
+    </xacro:if>
+  </xacro:tiago_torso>
 
   <!-- Arm, FT, EE -->
   <xacro:if value="${has_arm}">
