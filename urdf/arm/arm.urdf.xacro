@@ -39,10 +39,10 @@
 
     <!-- Param related properties -->
     <xacro:if value="${wrist_model == 'wrist-2010'}">
-      <xacro:property name="tool_link_z_offset" value="0.046"/>
+      <xacro:property name="tool_link_z_offset" value="${ 0.056873 if has_ft_sensor else 0.0518 }"/>
     </xacro:if>
     <xacro:if value="${wrist_model == 'wrist-2017'}">
-      <xacro:property name="tool_link_z_offset" value="${ 0.046 if has_ft_sensor else 0.0573 }"/>
+      <xacro:property name="tool_link_z_offset" value="${ 0.051875 if has_ft_sensor else 0.0615 }"/>
     </xacro:if>
 
     <!-- Shoulder -->
