@@ -1,0 +1,13 @@
+Source: ros-humble-tiago-description
+Section: misc
+Priority: optional
+Maintainer: Jordi Pages <jordi.pages@pal-robotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake-auto, ros-humble-ament-cmake-pytest <!nocheck>, ros-humble-ament-cmake-python, ros-humble-ament-lint-auto <!nocheck>, ros-humble-ament-lint-common <!nocheck>, ros-humble-launch-testing-ament-cmake <!nocheck>, ros-humble-urdf-test <!nocheck>, ros-humble-ros-workspace
+Homepage: https://github.com/pal-robotics/tiago_simulation
+Standards-Version: 3.9.2
+
+Package: ros-humble-tiago-description
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-launch, ros-humble-launch-pal, ros-humble-launch-param-builder, ros-humble-launch-ros, ros-humble-omni-base-description, ros-humble-pal-gripper-description, ros-humble-pal-hey5-description, ros-humble-pal-robotiq-description, ros-humble-pal-urdf-utils, ros-humble-pmb2-description, ros-humble-robot-state-publisher, ros-humble-xacro, ros-humble-ros-workspace
+Description: This package contains the description (mechanical, kinematic, visual, etc.) of the TIAGO robot.
+ The files in this package are parsed and used by a variety of other components. Most users will not interact directly with this package.
