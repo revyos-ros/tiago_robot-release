@@ -5,7 +5,6 @@
       planning_groups: # Sorted by order of preference
 @[if has_arm]@
         - arm_torso
-        - arm
 @[else]@
         - torso
 @[end if]@
