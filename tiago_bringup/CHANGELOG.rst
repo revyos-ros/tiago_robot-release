@@ -2,6 +2,39 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.10.0 (2024-11-29)
+-------------------
+* simplified logic
+* fix typo
+* fix logic
+* logic fix
+* fix logic of 'general' file
+* fix formatting errors
+* no needed
+* fix to don't let the robot load the no-ee.yaml file if no end effector is selected
+* Change last point of home motion
+* Contributors: Aina, matteovillani
+
+4.9.0 (2024-11-21)
+------------------
+* Merge branch 'vmo/joy_limits' into 'humble-devel'
+  Adding joystick limits handling
+  See merge request robots/tiago_robot!321
+* Adding pal distro condition
+* Adding joystick limits handling
+* Contributors: thomaspeyrucain, vivianamorlando
+
+4.8.0 (2024-11-21)
+------------------
+* Remove arm planning group alone
+* Contributors: Aina
+
+4.7.1 (2024-11-08)
+------------------
+
+4.7.0 (2024-11-06)
+------------------
+
 4.6.0 (2024-09-18)
 ------------------
 * Add slash to node names on parameter files
