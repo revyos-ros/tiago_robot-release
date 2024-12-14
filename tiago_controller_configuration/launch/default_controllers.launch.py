@@ -140,7 +140,16 @@ def declare_actions(
         paths=["launch", "gravity_compensation_controller.launch.py"],
         launch_arguments={"arm_motor_model": launch_args.arm_motor_model,
                           "end_effector": launch_args.end_effector},
-        condition=UnlessCondition(LaunchConfiguration("is_public_sim"))
+        condition=UnlessCondition(PythonExpression(
+                [
+                    "'",
+                    LaunchConfiguration("is_public_sim"),
+                    "' == 'True' or '",
+                    LaunchConfiguration("arm_type"),
+                    "' == 'no-arm'",
+                ]
+            )
+        ),
     )
 
     launch_description.add_action(gravity_compensation_controller)
