@@ -2,6 +2,25 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.10.0 (2024-11-29)
+-------------------
+* lunch the gravity comp controller only if not a public simulation and if Tiago has a arm
+* Contributors: matteovillani
+
+4.9.0 (2024-11-21)
+------------------
+
+4.8.0 (2024-11-21)
+------------------
+
+4.7.1 (2024-11-08)
+------------------
+
+4.7.0 (2024-11-06)
+------------------
+* Set update_rate for joint_state_broadcaster
+* Contributors: Noel Jimenez
+
 4.6.0 (2024-09-18)
 ------------------
 
