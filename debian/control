@@ -1,0 +1,12 @@
+Source: ros-humble-tiago-controller-configuration
+Section: misc
+Priority: optional
+Maintainer: Jordi Pages <jordi.pages@pal-robotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake-auto, ros-humble-ament-lint-auto <!nocheck>, ros-humble-ament-lint-common <!nocheck>, ros-humble-ros-workspace
+Homepage: https://github.com/pal-robotics/tiago_simulation
+Standards-Version: 3.9.2
+
+Package: ros-humble-tiago-controller-configuration
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-controller-manager, ros-humble-diff-drive-controller, ros-humble-force-torque-sensor-broadcaster, ros-humble-imu-sensor-broadcaster, ros-humble-joint-state-broadcaster, ros-humble-joint-trajectory-controller, ros-humble-launch, ros-humble-launch-pal, ros-humble-omni-base-controller-configuration, ros-humble-pal-gripper-controller-configuration, ros-humble-pal-hey5-controller-configuration, ros-humble-pal-robotiq-controller-configuration, ros-humble-pmb2-controller-configuration, ros-humble-ros2controlcli, ros-humble-ros-workspace
+Description: Configuration and launch files of TIAGo's controllers
