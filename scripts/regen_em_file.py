@@ -34,6 +34,10 @@ for arm in ['tiago-arm', 'no-arm']:
     else:
         end_effectors = ['no-ee']
     for end_effector in end_effectors:
+
+        if arm != 'no-arm' and end_effector == 'no-ee':
+            continue
+
         cfg = {
             'has_arm': arm not in ['no-arm'],
             'end_effector': end_effector,
